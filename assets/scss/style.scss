@@ -41,7 +41,11 @@ button {
 		}
 	}
 }
+<<<<<<< HEAD
 img {
+=======
+img{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -75,6 +79,7 @@ input:checked {
 }
 .btn {
 	padding: 0.25rem 1rem;
+<<<<<<< HEAD
 	border-radius: 0.1rem;
 	&.btn-block {
 		text-align: center;
@@ -91,6 +96,13 @@ input:checked {
 		padding: 1rem 2rem;
 		font-size: 1rem;
 	}
+=======
+	border-radius: 0.2rem;
+	&.btn-block{
+		text-align: center;
+		width: 100%;
+	}
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	&.btn-sm {
 		padding: 0.1rem 0.5rem;
 		font-size: 1rem;
@@ -113,7 +125,11 @@ input:checked {
 			border-color: $color;
 			@if ($class == "secondary") {
 				color: $color-black;
+<<<<<<< HEAD
 			} @else {
+=======
+			} @else{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 				color: $color-white;
 			}
 		}
@@ -139,6 +155,7 @@ input:checked {
 	}
 }
 
+<<<<<<< HEAD
 .accordion {
 	&.plan__accordion {
 		.accordion-item {
@@ -198,6 +215,8 @@ input:checked {
 	}
 }
 
+=======
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 /* Navbars */
 .base_nav {
 	width: 100%;
@@ -211,6 +230,7 @@ input:checked {
 	padding: 1rem 0;
 }
 
+<<<<<<< HEAD
 .tabnav {
 	padding: 0 0.5rem;
 	.nav-item {
@@ -218,6 +238,15 @@ input:checked {
 		.nav-link {
 			padding: 0.5rem 1rem;
 			&.active {
+=======
+.tabnav{
+	padding: 0 0.5rem;
+	.nav-item{
+		width: auto;
+		.nav-link{
+			padding: 0.5rem 1rem;
+			&.active{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 				border-bottom: 2px solid $color-blue;
 				color: $color-blue;
 			}
@@ -225,10 +254,17 @@ input:checked {
 	}
 }
 
+<<<<<<< HEAD
 nav.navbar {
 	.nav-item {
 		.nav-link {
 			&.btn {
+=======
+nav.navbar{
+	.nav-item{
+		.nav-link{
+			&.btn{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 				padding: 0.25rem 1rem;
 			}
 		}
@@ -258,9 +294,15 @@ nav.navbar {
 	border-radius: 0;
 }
 
+<<<<<<< HEAD
 .card {
 	.card-header,
 	.card-footer {
+=======
+.card{
+	.card-header,
+	.card-footer{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 		background-color: transparent;
 	}
 }
@@ -304,13 +346,21 @@ nav.navbar {
 }
 
 /* Custom */
+<<<<<<< HEAD
 .app_logo {
+=======
+.app_logo{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	--logo-width: 50px;
 	width: var(--logo-width);
 	aspect-ratio: 1;
 	overflow: hidden;
 	background-color: $color-light;
+<<<<<<< HEAD
 	img {
+=======
+	img{
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	}
 }
 .card-widget {

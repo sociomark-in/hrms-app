@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'HomeController';
 
 $route['login'] = 'HomeController/login';
+<<<<<<< HEAD
 $route['registration/new'] = 'HomeController/register';
 $route['product/(:any)'] = 'HomeController/products/$1';
 $route['module/(:any)'] = 'HomeController/modules/$1';
@@ -62,6 +63,12 @@ $route['registration/choose-a-plan'] = 'HomeController/subscription';
 $route['api/website/login'] = "AppController/api_authorize";
 $route['api/website/register'] = "AppSetupController/api_signup";
 $route['api/app/generate'] = "AppSetupController/api_generate_app";
+=======
+$route['register'] = 'HomeController/register';
+
+// $route['app'] = 'AppController/home';
+
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 
 $route['app/(:any)/dashboard'] = 'AppController/home/$1';
 $route['app/(:any)/settings/(:any)'] = 'AppController/settings/$1/$2';

@@ -5,6 +5,7 @@ class AppSetupController extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+<<<<<<< HEAD
 		$this->load->model('app/ClientModel', 'ClientModel');
 		$this->load->model('app/ApplicationModel', 'ApplicationModel');
 	}
@@ -50,6 +51,8 @@ class AppSetupController extends CI_Controller
 		} else {
 			return false;
 		}
+=======
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	}
 
 	public function settings() {

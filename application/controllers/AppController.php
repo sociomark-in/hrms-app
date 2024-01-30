@@ -19,11 +19,14 @@ class AppController extends CI_Controller
 		$this->user['role'] = $this->session->webuser_client['user']['role'];
 	}
 
+<<<<<<< HEAD
 	/* API Calls */
 	public function api_authorize(){
 		print_r($this->input->post());
 	}
 
+=======
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	public function home($app_id)
 	{
 		$new = $this->input->get("nu");

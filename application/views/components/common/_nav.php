@@ -30,7 +30,11 @@
 					<a class="nav-link btn btn-primary" title="Home" href="<?= base_url('login') ?>">Login</a>
 				</li>
 				<li class="nav-item">
+<<<<<<< HEAD
 					<a class="nav-link btn btn-outline-light" href="<?= base_url('registration/new') ?>">Sign Up</a>
+=======
+					<a class="nav-link btn btn-outline-light" href="<?= base_url('register') ?>">Sign Up</a>
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 				</li>
 			</ul>
 		</div>

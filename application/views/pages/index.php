@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
 	<meta charset="UTF-8">
@@ -184,4 +185,17 @@
 	<?php require_once APPPATH . "views/components/common/_js.php"; ?>
 </body>
 
+=======
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<?php require_once APPPATH . "views/components/common/_head.php";?>
+</head>
+<body>
+	<?php require_once APPPATH . "views/components/common/_nav.php";?>
+	<?php require_once APPPATH . "views/components/common/_footer.php";?>
+	<?php require_once APPPATH . "views/components/common/_js.php";?>
+</body>
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 </html>

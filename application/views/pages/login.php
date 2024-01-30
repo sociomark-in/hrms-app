@@ -23,7 +23,10 @@
 									</div>
 								</div>
 								<div class="mb-4">
+<<<<<<< HEAD
 									<?= form_open() ?>
+=======
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 									<div class="mb-3">
 										<label for="" class="form-label">Username</label>
 										<input type="text" class="form-control">
@@ -41,11 +44,18 @@
 									<div class="mb-2 d-none">
 										<button type="submit" class="btn btn-block btn-grey">Sign Up with <?= PRODUCT_NAME ?></button>
 									</div>
+<<<<<<< HEAD
 									<?= form_close() ?>
 								</div>
 								<div class="card-footer">
 									<div class="text-center">
 										<text>Not a Customer Yet? <a href="<?= base_url('registration/new') ?>" class="text-primary">Sign Up</a></text>
+=======
+								</div>
+								<div class="card-footer">
+									<div class="text-center">
+										<text>Not a Customer Yet? <a href="<?= base_url('register') ?>" class="text-primary">Sign Up</a></text>
+>>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 									</div>
 								</div>
 							</div>

@@ -6,7 +6,9 @@ class ApplicationModel extends CI_Model
 	public function __construct()
 	{
 		parent::__construct();
-		$this->tables = ['app_data' => 'client_applications'];
+		$this->tables = [
+			'app_data' => 'client_applications'
+		];
 	}
 
 	public function insert($data = [], $where = null){
@@ -18,5 +20,15 @@ class ApplicationModel extends CI_Model
 		} else {
 			return false;
 		}
+	}
+
+	public function get($columns = null, $where = null){
+		if(null !== $columns){
+			$this->db->select($columns);
+		}
+		if(null !== $where){
+			$this->db->where($where);
+		}
+		return json_encode($this->db->get($this->tables['app_data'])->result_array());
 	}
 }

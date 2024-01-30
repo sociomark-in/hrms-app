@@ -210,6 +210,19 @@ button {
 	padding: 1rem 0;
 }
 
+.tab-steps{
+	.tab-item-step{
+		color: $color-black;
+		&.active{
+			background-color: darken($color-white, $amount: 10);
+		}
+		&.done{
+			background-color: transparent;
+			pointer-events: none;
+		}
+	}
+}
+
 .tabnav {
 	padding: 0 0.5rem;
 	.nav-item {

@@ -14,18 +14,21 @@
 
 			<!-- =======================================================	UNCOMMON SECTION	==================================================== -->
 			<main>
+				<div class="px-4">
+					<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+						</ol>
+					</nav>
+				</div>
 				<div class="p-2">
-					<div class="px-4">
-						<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-							</ol>
-						</nav>
-					</div>
 					<div class="card">
 						<div class="card-body">
 							<div class="row m-0">
-								<div class="col-lg-3 col-12">
+								<div class="col-xl-4 col-lg-6 col-12">
+									<div class="py-3">
+										<h3>Welcome, Your Name</h3>
+									</div>
 									<div class="title mb-3">
 										<h4>Let's set up {organization_name}.</h4>
 									</div>
@@ -40,7 +43,7 @@
 										<div class="text-muted"><?= $completed ?> of <?= $steps ?> Completed</div>
 									</div>
 								</div>
-								<div class="col-lg-9 col-12">
+								<div class="col-xl-8 col-lg-6 col-12">
 									<div class="accordion gap-3" id="accordionExample">
 										<div class="accordion-item">
 											<h2 class="accordion-header">
@@ -52,28 +55,28 @@
 												<div class="accordion-body">
 													<div class="ordered-tasks">
 														<div class="row g-3">
-															<div class="col-lg-4 col-12 nav-item">
+															<div class="col-lg-6 col-12 nav-item">
 																<div class="task-item d-flex justify-content-between">
 																	Basic Company Details
-																	<a href="" class="task-action btn btn-sm btn-primary">Go!</a>
+																	<a href="" class="task-action btn btn-sm btn-primary">Start!</a>
 																</div>
 															</div>
-															<div class="col-lg-4 col-12 nav-item">
+															<div class="col-lg-6 col-12 nav-item">
 																<div class="task-item task-done d-flex justify-content-between">
 																	Working Days, Pay Date.
-																	<a href="" class="task-action btn btn-sm btn-primary">Go!</a>
+																	<a href="" class="task-action btn btn-sm btn-primary">Start!</a>
 																</div>
 															</div>
-															<div class="col-lg-4 col-12 nav-item">
+															<div class="col-lg-6 col-12 nav-item">
 																<div class="task-item d-flex justify-content-between">
 																	Salary Date, Salary Structure.
-																	<a href="" class="task-action btn btn-sm btn-primary">Go!</a>
+																	<a href="" class="task-action btn btn-sm btn-primary">Start!</a>
 																</div>
 															</div>
-															<div class="col-lg-4 col-12 nav-item">
+															<div class="col-lg-6 col-12 nav-item">
 																<div class="task-item d-flex justify-content-between">
 																	Basic Company Details
-																	<a href="" class="task-action btn btn-sm btn-primary">Go!</a>
+																	<a href="" class="task-action btn btn-sm btn-primary">Start!</a>
 																</div>
 															</div>
 														</div>
@@ -89,12 +92,12 @@
 											</h2>
 											<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 												<div class="accordion-body">
-												<div class="ordered-tasks">
+													<div class="ordered-tasks">
 														<div class="row g-3">
-															<div class="col-lg-4 col-12 nav-item">
+															<div class="col-lg-6 col-12 nav-item">
 																<div class="task-item d-flex justify-content-between">
 																	Add A Person
-																	<a href="" class="task-action btn btn-sm btn-primary">Go!</a>
+																	<a href="" class="task-action btn btn-sm btn-primary">Start!</a>
 																</div>
 															</div>
 														</div>

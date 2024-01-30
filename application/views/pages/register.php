@@ -22,7 +22,6 @@
 										<img src="<?= base_url() ?>" alt="<?= PRODUCT_NAME ?>">
 									</div>
 								</div>
-<<<<<<< HEAD
 								<?= form_open('api/website/register',null, []) ?>
 								<div class="mb-4">
 									<div class="mb-3">
@@ -40,24 +39,6 @@
 									<div class="mb-3">
 										<label for="" class="form-label">Contact Number<span>*</span></label>
 										<input type="text" name="client[contact_number]" class="form-control">
-=======
-								<div class="mb-4">
-									<div class="mb-3">
-										<label for="" class="form-label">Full Name<span>*</span></label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="mb-3">
-										<label for="" class="form-label">Organization Name<span>*</span></label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="mb-3">
-										<label for="" class="form-label">Work Email Address<span>*</span></label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="mb-3">
-										<label for="" class="form-label">Contact Number<span>*</span></label>
-										<input type="text" class="form-control">
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 									</div>
 									<div class="mb-3">
 										<label for="" class="form-label">No. Of Employees<span>*</span></label>
@@ -71,11 +52,7 @@
 									</div>
 									<div class="mb-3">
 										<label for="" class="form-label">Your Role<span>*</span></label>
-<<<<<<< HEAD
 										<select name="client[role]" id="" class="form-control">
-=======
-										<select name="" id="" class="form-control">
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 											<option value="HR">HR</option>
 											<option value="Founder">Founder / Owner</option>
 											<option value="Employee">Employee</option>
@@ -84,7 +61,6 @@
 									</div>
 									<div class="mb-3">
 										<div class="form-check">
-<<<<<<< HEAD
 											<input class="form-check-input" type="checkbox" name="consent[accept_pp_tnc]" value="Accept" id="flexCheckDefault">
 											<label class="form-check-label" for="flexCheckDefault">
 												I agree to the <a href="<?= base_url() ?>" class="text-primary">privacy policy</a> and <a href="<?= base_url() ?>" class="text-primary">terms of use</a>.
@@ -92,35 +68,19 @@
 										</div>
 										<div class="form-check">
 											<input class="form-check-input" type="checkbox" checked  name="consent[onboarding_help]" value="Accept" id="flexCheckDefault">
-=======
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-											<label class="form-check-label" for="flexCheckDefault">
-											I agree to the <a href="<?= base_url() ?>" class="text-primary">privacy policy</a> and <a href="<?= base_url() ?>" class="text-primary">terms of use</a>.
-											</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 											<label class="form-check-label" for="flexCheckDefault">
 												Connect with me via email for onboarding.
 											</label>
 										</div>
 									</div>
 									<div class="mb-2">
-<<<<<<< HEAD
-										<button type="submit" class="btn btn-block btn-primary">Start your 7-day Trial!</button>
-=======
-										<button type="submit" class="btn btn-block btn-primary">Register</button>
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
+										<button type="submit" class="btn btn-block btn-primary">Start your 30-day Trial!</button>
 									</div>
 									<div class="mb-2 d-none">
 										<button type="submit" class="btn btn-block btn-grey">Sign Up with <?= PRODUCT_NAME ?></button>
 									</div>
 								</div>
-<<<<<<< HEAD
 								<?= form_close() ?>
-=======
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 								<div class="card-footer">
 									<div class="text-center">
 										<text>Already Registered with us? <a href="<?= base_url('login') ?>" class="text-primary">Login</a></text>

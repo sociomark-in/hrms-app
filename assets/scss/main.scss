@@ -311,6 +311,12 @@ nav.navbar {
 }
 
 /* Custom */
+/* Footer */
+
+footer{
+	background-color: darken($color-blue, $amount: 10);
+	color: $color-white !important;
+}
 
 /* Navs & Tabs */
 .feature_tab-link {
@@ -329,6 +335,8 @@ nav.navbar {
 		}
 	}
 }
+
+/* Swiper */
 
 .section-title {
 	font-weight: 700;

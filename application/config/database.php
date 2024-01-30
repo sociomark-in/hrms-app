@@ -78,7 +78,6 @@ $db['developer'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
 	'database' => 'hrms_people',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -102,8 +101,6 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-=======
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	'database' => 'sociomark_payroll',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

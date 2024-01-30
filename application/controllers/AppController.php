@@ -19,22 +19,19 @@ class AppController extends CI_Controller
 		$this->user['role'] = $this->session->webuser_client['user']['role'];
 	}
 
-<<<<<<< HEAD
 	/* API Calls */
 	public function api_authorize(){
 		print_r($this->input->post());
 	}
 
-=======
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 	public function home($app_id)
 	{
 		$new = $this->input->get("nu");
 		$this->data['configs']['app_id'] = $app_id;
-		$this->data['settings']['holidays'] = json_decode($this->HolidaysModel->get(), true);
 		if (null !== $new) {
 			$this->load->view("dashboard/setup/welcome",  $this->data);
 		} else{
+			$this->data['settings']['holidays'] = json_decode($this->HolidaysModel->get(), true);
 			switch ($this->user['role']) {
 				case 'employee':
 					$this->load->view('dashboard/employee/home', $this->data);

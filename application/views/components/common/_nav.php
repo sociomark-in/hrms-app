@@ -10,19 +10,19 @@
 					<a class="nav-link" title="Home" href="<?= base_url() ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url() ?>">HRMS</a>
+					<a class="nav-link" href="<?= base_url("product/hrms") ?>">HRMS</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url() ?>">Payroll</a>
+					<a class="nav-link" href="<?= base_url("product/hrms") ?>">Payroll</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url() ?>">Resources</a>
+					<a class="nav-link" href="">Resources</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url() ?>">Support</a>
+					<a class="nav-link" href="">Support</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url() ?>">Pricing</a>
+					<a class="nav-link" href="">Pricing</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav align-items-center gap-3">
@@ -30,11 +30,7 @@
 					<a class="nav-link btn btn-primary" title="Home" href="<?= base_url('login') ?>">Login</a>
 				</li>
 				<li class="nav-item">
-<<<<<<< HEAD
 					<a class="nav-link btn btn-outline-light" href="<?= base_url('registration/new') ?>">Sign Up</a>
-=======
-					<a class="nav-link btn btn-outline-light" href="<?= base_url('register') ?>">Sign Up</a>
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 				</li>
 			</ul>
 		</div>

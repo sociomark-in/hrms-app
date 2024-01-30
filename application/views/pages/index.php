@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
 	<meta charset="UTF-8">
@@ -35,7 +34,7 @@
 								<p>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fuga alias excepturi rerum dolorem nemo architecto expedita impedit at sit cum aliquid culpa amet dicta, mollitia quo adipisci voluptatem incidunt?
 								</p>
-								<a href="" class="btn btn-primary btn-lg">Get a 7-days Free Trial&nbsp;<i class="ti ti-arrow-narrow-right"></i></a>
+								<a href="" class="btn btn-primary btn-lg">Get a 30-days Free Trial&nbsp;<i class="ti ti-arrow-narrow-right"></i></a>
 								<button class="btn btn-lg btn-icon">Watch Video&nbsp;<i class="ti icon-lg ti-player-play-filled"></i></button>
 							</div>
 						</div>
@@ -54,7 +53,7 @@
 						</div>
 					</div>
 				</div>
-
+				
 				<div class="swiper mySwiper">
 					<div class="swiper-wrapper" id="myTab" role="tablist">
 						<div class="swiper-slide" role="presentation">
@@ -169,6 +168,9 @@
 					.mySwiper .swiper-slide {
 						width: auto;
 					}
+					.swiper-wrapper {
+						height: auto;
+					}
 				</style>
 				<script>
 					var swiper = new Swiper(".mySwiper", {
@@ -185,17 +187,4 @@
 	<?php require_once APPPATH . "views/components/common/_js.php"; ?>
 </body>
 
-=======
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<?php require_once APPPATH . "views/components/common/_head.php";?>
-</head>
-<body>
-	<?php require_once APPPATH . "views/components/common/_nav.php";?>
-	<?php require_once APPPATH . "views/components/common/_footer.php";?>
-	<?php require_once APPPATH . "views/components/common/_js.php";?>
-</body>
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 </html>

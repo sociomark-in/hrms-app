@@ -7,47 +7,50 @@ class HomeController extends CI_Controller
 		parent::__construct();
 	}
 
-	public function index(){
+	public function index()
+	{
 		$this->load->view('pages/index');
 	}
-<<<<<<< HEAD
-	public function products($slug){
+	public function products($slug)
+	{
 		switch ($slug) {
-			case 'value':
+			case 'hrms':
+				$this->load->view('pages/product/hrms');
 				# code...
 				break;
-			
+			case 'payroll':
+				$this->load->view('pages/index');
+				# code...
+				break;
+
 			default:
 				redirect(base_url());
 				break;
 		}
-		$this->load->view('pages/index');
 	}
-	public function modules($slug){
+	public function modules($slug)
+	{
 		switch ($slug) {
 			case 'value':
 				# code...
 				break;
-			
+
 			default:
 				redirect(base_url());
 				break;
 		}
-		$this->load->view('pages/index');
 	}
-=======
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
-	
-	public function login(){
+
+	public function login()
+	{
 		$this->load->view('pages/login');
 	}
-	public function register(){
+	public function register()
+	{
 		$this->load->view('pages/register');
 	}
-<<<<<<< HEAD
-	public function subscription(){
+	public function subscription()
+	{
 		$this->load->view('pages/subscription');
 	}
-=======
->>>>>>> fca02e6829e11195fa8c20cb1893e0e18658468b
 }

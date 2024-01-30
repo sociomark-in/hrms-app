@@ -2,7 +2,7 @@
 class HolidaysModel extends CI_Model
 {
 	public $table = [
-		'holidays' => "holidays"
+		'holidays' => "app_holidays"
 	];
 
 	public function __construct()

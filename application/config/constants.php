@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+defined('PRODUCT_NAME') OR define('PRODUCT_NAME', "SocioHR");
 defined('APP_ID') OR define('APP_ID', "xQnnT8oppayjFCMlZLPox49pXqUj2lV3");
 defined('APP_PREFIX') OR define('APP_PREFIX', "glaxx_");
 /*

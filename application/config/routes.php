@@ -49,7 +49,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'AppController';
-$route['app'] = 'AppController/home';
+$route['default_controller'] = 'HomeController';
+
+$route['login'] = 'HomeController/login';
+$route['registration/new'] = 'HomeController/register';
+$route['product/(:any)'] = 'HomeController/products/$1';
+$route['module/(:any)'] = 'HomeController/modules/$1';
+$route['registration/choose-a-plan'] = 'HomeController/subscription';
+
+// $route['app'] = 'AppController/home';
+
+$route['api/website/login'] = "AppController/api_authorize";
+$route['api/website/register'] = "AppSetupController/api_signup";
+$route['api/app/generate'] = "AppSetupController/api_generate_app";
+
+$route['app/(:any)/dashboard'] = 'AppController/home/$1';
+$route['app/(:any)/settings/(:any)'] = 'AppController/settings/$1/$2';
+$route['app/(:any)/attendance'] = 'AppController/attendance/$1';
+$route['app/(:any)/attendance'] = 'AppController/attendance/$1';
+
+$route['onboarding/settings'] = 'AppSetupController/settings';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

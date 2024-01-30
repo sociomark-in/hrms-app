@@ -67,6 +67,11 @@ input:checked {
 	.bg-#{$class} {
 		background-color: $color !important;
 	}
+	.highlighted-#{$class} {
+		background-color: rgba($color, $alpha: 0.1);
+		color: $color;
+		padding: 0 0.25rem;
+	}
 	@for $value from 5 to 100 {
 		.bg-#{$class}-subtle-#{$value} {
 			background-color: rgba($color, $alpha: calc($value/100)) !important;
@@ -75,19 +80,22 @@ input:checked {
 }
 .btn {
 	padding: 0.25rem 1rem;
-	border-radius: 0.1rem;
+	border-radius: 0;
+	&.border-rounded {
+		border-radius: 0.25rem;
+	}
 	&.btn-block {
 		text-align: center;
 		width: 100%;
 	}
-	&.btn-icon{
+	&.btn-icon {
 		display: inline-flex;
 		align-items: center;
-		.icon-lg{
+		.icon-lg {
 			font-size: 1.5rem;
 		}
 	}
-	&.btn-lg{
+	&.btn-lg {
 		padding: 1rem 2rem;
 		font-size: 1rem;
 	}
@@ -180,7 +188,7 @@ input:checked {
 
 		ul.plan__feature_list {
 			padding-left: 0;
-			li{
+			li {
 				margin-bottom: 1rem;
 				display: flex;
 				align-items: center;
@@ -191,7 +199,6 @@ input:checked {
 					aspect-ratio: 1;
 					background: url("../media/icons/checked.png");
 					background-size: contain;
-	
 				}
 			}
 		}
@@ -304,6 +311,29 @@ nav.navbar {
 }
 
 /* Custom */
+
+/* Navs & Tabs */
+.feature_tab-link {
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	.icon {
+		margin-bottom: 0.5rem;
+		img {
+			width: 4rem;
+			aspect-ratio: 1;
+		}
+	}
+	&.active {
+		.title {
+			color: $color-blue;
+		}
+	}
+}
+
+.section-title {
+	font-weight: 700;
+	font-size: 2.5rem;
+}
 .app_logo {
 	--logo-width: 50px;
 	width: var(--logo-width);
@@ -364,19 +394,25 @@ nav.navbar {
 	border-radius: 0.3rem;
 }
 
-
-.plan__card{
+.plan__card {
 	min-height: 290px;
-	.plan__title{
-		.plan_price{
+	.plan__title {
+		.plan_price {
 			font-weight: 800;
 			font-size: 3rem;
 			margin: 0;
 		}
-		.plan_price_condition{
+		.plan_price_condition {
 			margin: 0;
 		}
 	}
 }
 
-@import "_web_ui.scss";
+main#website{
+	section{
+		&:not(.banner){
+			padding: calc(max(5vmax, 3rem));
+		}
+	}
+}
+

@@ -14,6 +14,7 @@ class DashboardController extends My_Controller
 		if($user['app_role'] == "admin"){
 			LeavesModel->get(); 
 		*/
+		$this->session->set_flashdata('first_user', true);
 		$this->load->employee_dashboard("admin/home", $this->data);
 
 		/*

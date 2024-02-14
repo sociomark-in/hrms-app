@@ -11,3 +11,5 @@ An HR & Payroll Application in PHP 8 and Codeigniter 3
 ## Installation
 
 
+## Tasks
+- Need to work on Punch in and Time Chart Dialogue.

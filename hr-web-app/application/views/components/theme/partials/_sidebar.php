@@ -1,7 +1,7 @@
 <nav class="sidebar">
 	<div class="sidebar-header">
 		<a href="#" class="sidebar-brand">
-			Noble<span>UI</span>
+			HRMS<span>Panel</span>
 		</a>
 		<div class="sidebar-toggler not-active">
 			<span></span>
@@ -13,13 +13,14 @@
 		<ul class="nav">
 			<li class="nav-item nav-category">Main</li>
 			<li class="nav-item">
-				<a href="<?= base_url("") ?>dashboard.html" class="nav-link">
-					<i class="link-icon" data-feather="box"></i>
+				<a href="<?= base_url("") ?>dashboard" class="nav-link">
+					<i class="link-icon" data-feather="home"></i>
 					<span class="link-title">Dashboard</span>
 				</a>
 			</li>
-			<li class="nav-item nav-category">web apps</li>
-			<li class="nav-item">
+
+			<li class="nav-item nav-category">Applications</li>
+			<li class="nav-item d-none">
 				<a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
 					<i class="link-icon" data-feather="mail"></i>
 					<span class="link-title">Email</span>
@@ -28,286 +29,153 @@
 				<div class="collapse" id="emails">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/email/inbox.html" class="nav-link">Inbox</a>
+							<a href="<?= base_url("") ?>email/inbox" class="nav-link">Inbox</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/email/read.html" class="nav-link">Read</a>
+							<a href="<?= base_url("") ?>email/read" class="nav-link">Read</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/email/compose.html" class="nav-link">Compose</a>
+							<a href="<?= base_url("") ?>email/compose" class="nav-link">Compose</a>
 						</li>
 					</ul>
 				</div>
 			</li>
-			<li class="nav-item">
-				<a href="<?= base_url("") ?>pages/apps/chat.html" class="nav-link">
+			<li class="nav-item d-none">
+				<a href="<?= base_url("chat") ?>" class="nav-link">
 					<i class="link-icon" data-feather="message-square"></i>
 					<span class="link-title">Chat</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="<?= base_url("") ?>pages/apps/calendar.html" class="nav-link">
+				<a href="<?= base_url("calendar") ?>" class="nav-link">
 					<i class="link-icon" data-feather="calendar"></i>
 					<span class="link-title">Calendar</span>
 				</a>
 			</li>
-			<li class="nav-item nav-category">Components</li>
+
+			<li class="nav-item nav-category">Employee</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
-					<i class="link-icon" data-feather="feather"></i>
-					<span class="link-title">UI Kit</span>
+				<a class="nav-link" data-bs-toggle="collapse" href="#generalOption" role="button" aria-expanded="false" aria-controls="generalOption">
+					<i class="link-icon" data-feather="box"></i>
+					<span class="link-title">General</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="uiComponents">
+				<div class="collapse" id="generalOption">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/accordion.html" class="nav-link">Accordion</a>
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Attendance</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts.html" class="nav-link">Alerts</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/badges.html" class="nav-link">Badges</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/breadcrumbs.html" class="nav-link">Breadcrumbs</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/buttons.html" class="nav-link">Buttons</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/button-group.html" class="nav-link">Button group</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/cards.html" class="nav-link">Cards</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/carousel.html" class="nav-link">Carousel</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/collapse.html" class="nav-link">Collapse</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/dropdowns.html" class="nav-link">Dropdowns</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/list-group.html" class="nav-link">List group</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/media-object.html" class="nav-link">Media object</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/modal.html" class="nav-link">Modal</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/navs.html" class="nav-link">Navs</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/navbar.html" class="nav-link">Navbar</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/pagination.html" class="nav-link">Pagination</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/popover.html" class="nav-link">Popovers</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/progress.html" class="nav-link">Progress</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/scrollbar.html" class="nav-link">Scrollbar</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/scrollspy.html" class="nav-link">Scrollspy</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/spinners.html" class="nav-link">Spinners</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/tabs.html" class="nav-link">Tabs</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/tooltips.html" class="nav-link">Tooltips</a>
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Alerts</a>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
-					<i class="link-icon" data-feather="anchor"></i>
-					<span class="link-title">Advanced UI</span>
+				<a class="nav-link" data-bs-toggle="collapse" href="#workOffs" role="button" aria-expanded="false" aria-controls="workOffs">
+					<i class="link-icon" data-feather="navigation"></i>
+					<span class="link-title">Work-Offs</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="advancedUI">
+				<div class="collapse" id="workOffs">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/advanced-ui/cropper.html" class="nav-link">Cropper</a>
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Request New</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/advanced-ui/sortablejs.html" class="nav-link">SortableJs</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/advanced-ui/sweet-alert.html" class="nav-link">Sweet Alert</a>
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms">
-					<i class="link-icon" data-feather="inbox"></i>
-					<span class="link-title">Forms</span>
+				<a class="nav-link" data-bs-toggle="collapse" href="#salaryPayroll" role="button" aria-expanded="false" aria-controls="salaryPayroll">
+					<i class="link-icon" data-feather="credit-card"></i>
+					<span class="link-title">Payroll</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="forms">
+				<div class="collapse" id="salaryPayroll">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/forms/basic-elements.html" class="nav-link">Basic Elements</a>
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Salary Slips</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/forms/advanced-elements.html" class="nav-link">Advanced Elements</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/forms/editors.html" class="nav-link">Editors</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/forms/wizard.html" class="nav-link">Wizard</a>
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#charts" role="button" aria-expanded="false" aria-controls="charts">
-					<i class="link-icon" data-feather="pie-chart"></i>
-					<span class="link-title">Charts</span>
+				<a href="<?= base_url("employees") ?>" class="nav-link">
+					<i class="link-icon" data-feather="users"></i>
+					<span class="link-title">All Employees</span>
+				</a>
+			</li>
+			
+			
+			<li class="nav-item nav-category">Admin</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#generalOption" role="button" aria-expanded="false" aria-controls="generalOption">
+					<i class="link-icon" data-feather="box"></i>
+					<span class="link-title">General</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="charts">
+				<div class="collapse" id="generalOption">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/charts/apex.html" class="nav-link">Apex</a>
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Attendance</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/charts/chartjs.html" class="nav-link">ChartJs</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/charts/flot.html" class="nav-link">Flot</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/charts/peity.html" class="nav-link">Peity</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/charts/sparkline.html" class="nav-link">Sparkline</a>
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Alerts</a>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
-					<i class="link-icon" data-feather="layout"></i>
-					<span class="link-title">Table</span>
+				<a class="nav-link" data-bs-toggle="collapse" href="#requestAll" role="button" aria-expanded="false" aria-controls="requestAll">
+					<i class="link-icon" data-feather="navigation"></i>
+					<span class="link-title">All Requests</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="tables">
+				<div class="collapse" id="requestAll">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/tables/basic-table.html" class="nav-link">Basic Tables</a>
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Request New</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/tables/data-table.html" class="nav-link">Data Table</a>
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#icons" role="button" aria-expanded="false" aria-controls="icons">
-					<i class="link-icon" data-feather="smile"></i>
-					<span class="link-title">Icons</span>
+				<a class="nav-link" data-bs-toggle="collapse" href="#salaryPayroll" role="button" aria-expanded="false" aria-controls="salaryPayroll">
+					<i class="link-icon" data-feather="credit-card"></i>
+					<span class="link-title">Payroll</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="icons">
+				<div class="collapse" id="salaryPayroll">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/icons/feather-icons.html" class="nav-link">Feather Icons</a>
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Salary Slips</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/icons/flag-icons.html" class="nav-link">Flag Icons</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/icons/mdi-icons.html" class="nav-link">Mdi Icons</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="nav-item nav-category">Pages</li>
-			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#general-pages" role="button" aria-expanded="false" aria-controls="general-pages">
-					<i class="link-icon" data-feather="book"></i>
-					<span class="link-title">Special pages</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
-				</a>
-				<div class="collapse" id="general-pages">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/general/blank-page.html" class="nav-link">Blank page</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/general/faq.html" class="nav-link">Faq</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/general/invoice.html" class="nav-link">Invoice</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/general/profile.html" class="nav-link">Profile</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/general/pricing.html" class="nav-link">Pricing</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/general/timeline.html" class="nav-link">Timeline</a>
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#authPages" role="button" aria-expanded="false" aria-controls="authPages">
-					<i class="link-icon" data-feather="unlock"></i>
-					<span class="link-title">Authentication</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
+				<a href="<?= base_url("employees") ?>" class="nav-link">
+					<i class="link-icon" data-feather="users"></i>
+					<span class="link-title">All Employees</span>
 				</a>
-				<div class="collapse" id="authPages">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/auth/login.html" class="nav-link">Login</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/auth/register.html" class="nav-link">Register</a>
-						</li>
-					</ul>
-				</div>
 			</li>
+
+
+			<li class="nav-item nav-category">Account</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#errorPages" role="button" aria-expanded="false" aria-controls="errorPages">
-					<i class="link-icon" data-feather="cloud-off"></i>
-					<span class="link-title">Error</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
-				</a>
-				<div class="collapse" id="errorPages">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/error/404.html" class="nav-link">404</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/error/500.html" class="nav-link">500</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="nav-item nav-category">Docs</li>
-			<li class="nav-item">
-				<a href="https://www.nobleui.com/html/documentation/docs.html" target="_blank" class="nav-link">
+				<a href="https://www.nobleui.com/html/documentation/docs" target="_blank" class="nav-link">
 					<i class="link-icon" data-feather="hash"></i>
 					<span class="link-title">Documentation</span>
 				</a>
@@ -337,11 +205,11 @@
 		</div>
 		<div class="theme-wrapper">
 			<h6 class="text-muted mb-2">Light Theme:</h6>
-			<a class="theme-item active" href="<?= base_url("") ?>../demo1/dashboard.html">
+			<a class="theme-item active" href="<?= base_url("") ?>../demo1/dashboard">
 				<img src="<?= base_url("assets") ?>/images/screenshots/light.jpg" alt="light theme">
 			</a>
 			<h6 class="text-muted mb-2">Dark Theme:</h6>
-			<a class="theme-item" href="<?= base_url("") ?>../demo2/dashboard.html">
+			<a class="theme-item" href="<?= base_url("") ?>../demo2/dashboard">
 				<img src="<?= base_url("assets") ?>/images/screenshots/dark.jpg" alt="light theme">
 			</a>
 		</div>

@@ -1,0 +1,39 @@
+$primary: #6571ff;
+$secondary: #7987a1;
+$white: #fff;
+.introjs-tooltip {
+	&.introjs-floating {
+	}
+}
+.introjs-helperLayer{
+	border: 2px dashed $primary;
+	box-shadow: rgb(58 58 58 / 50%) 0px 0px 0px 5000px !important;
+}
+.introjs-button {
+	&.introjs-prevbutton {
+		text-shadow: none;
+		color: $white;
+		background-color: $secondary;
+		border: none;
+		&:hover, &:active, &:focus{
+			color: $white;
+			background-color: darken($primary, $amount: 5);
+		}
+	}
+	&.introjs-nextbutton {
+		text-shadow: none;
+		color: $white;
+		background-color: $primary;
+		border: none;
+		&:hover, &:active, &:focus{
+			border: none;
+			color: $white;
+			background-color: darken($primary, $amount: 5);
+		}
+		&:focus{
+			box-shadow: 0 0 0 0.25rem rgba($primary, $alpha: 0.2);
+		}
+	}
+}
+.introjs-disabled {
+}

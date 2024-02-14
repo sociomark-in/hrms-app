@@ -9,7 +9,7 @@
 		<div class="col-lg-3 col-12">
 			<div class="row">
 				<div class="col-12 grid-margin stretch-card">
-					<div class="card">
+					<div class="card intro__profile">
 						<div class="card-body">
 							<div class="d-flex justify-content-between align-items-baseline mb-3">
 								<h6 class="card-title mb-0">Profile Completion</h6>
@@ -40,80 +40,84 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-12 grid-margin stretch-card">
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between align-items-baseline">
-								<h6 class="card-title mb-0">Working Days</h6>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<h3 class="mb-2">3,897</h3>
-									<div class="d-flex align-items-baseline">
-										<p class="text-success">
-											<span>+3.3%</span>
-											<i data-feather="arrow-up" class="icon-sm mb-1"></i>
-										</p>
+				<div class="col-12 intro__days">
+					<div class="row">
+						<div class="col-lg-6 col-12 grid-margin stretch-card">
+							<div class="card intro__days">
+								<div class="card-body">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h6 class="card-title mb-0">Working Days</h6>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<h3 class="mb-2">3,897</h3>
+											<div class="d-flex align-items-baseline">
+												<p class="text-success">
+													<span>+3.3%</span>
+													<i data-feather="arrow-up" class="icon-sm mb-1"></i>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-12 grid-margin stretch-card">
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between align-items-baseline">
-								<h6 class="card-title mb-0">Working Days</h6>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<h3 class="mb-2">3,897</h3>
-									<div class="d-flex align-items-baseline">
-										<p class="text-success">
-											<span>+3.3%</span>
-											<i data-feather="arrow-up" class="icon-sm mb-1"></i>
-										</p>
+						<div class="col-lg-6 col-12 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h6 class="card-title mb-0">Working Days</h6>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<h3 class="mb-2">3,897</h3>
+											<div class="d-flex align-items-baseline">
+												<p class="text-success">
+													<span>+3.3%</span>
+													<i data-feather="arrow-up" class="icon-sm mb-1"></i>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-12 grid-margin stretch-card">
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between align-items-baseline">
-								<h6 class="card-title mb-0">Working Days</h6>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<h3 class="mb-2">3,897</h3>
-									<div class="d-flex align-items-baseline">
-										<p class="text-success">
-											<span>+3.3%</span>
-											<i data-feather="arrow-up" class="icon-sm mb-1"></i>
-										</p>
+						<div class="col-lg-6 col-12 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h6 class="card-title mb-0">Working Days</h6>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<h3 class="mb-2">3,897</h3>
+											<div class="d-flex align-items-baseline">
+												<p class="text-success">
+													<span>+3.3%</span>
+													<i data-feather="arrow-up" class="icon-sm mb-1"></i>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-12 grid-margin stretch-card">
-					<div class="card">
-						<div class="card-body">
-							<div class="d-flex justify-content-between align-items-baseline">
-								<h6 class="card-title mb-0">Working Days</h6>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<h3 class="mb-2">3,897</h3>
-									<div class="d-flex align-items-baseline">
-										<p class="text-success">
-											<span>+3.3%</span>
-											<i data-feather="arrow-up" class="icon-sm mb-1"></i>
-										</p>
+						<div class="col-lg-6 col-12 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h6 class="card-title mb-0">Working Days</h6>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<h3 class="mb-2">3,897</h3>
+											<div class="d-flex align-items-baseline">
+												<p class="text-success">
+													<span>+3.3%</span>
+													<i data-feather="arrow-up" class="icon-sm mb-1"></i>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -122,8 +126,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 grid-margin stretch-card">
-					<div class="accordion w-100" id="accordionHolidays">
+				<div class="col-12 grid-margin stretch-card intro__leaves">
+					<div class="accordion w-100" id="accordionLeaves">
 						<div class="accordion-item">
 							<div class="card">
 								<h2 class="accordion-header" id="headingTwo">
@@ -162,8 +166,18 @@
 			</div>
 		</div>
 		<div class="col-lg-6 col-12">
-			<h6 class="card-title mb-3">All Announcements</h6>
-			<div class="row g-0">
+			<div class="d-flex mb-3 w-100 justify-content-between align-items-center me-2">
+				<h6 class="card-title text-uppercase mb-0">All Announcements</h6>
+				<!-- <div class="dropdown">
+					<a type="button" id="buttonEvents" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Filter By&nbsp;<i class="icon-lg text-muted pb-3px" data-feather="filter"></i>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="buttonEvents">
+						<a class="dropdown-item d-flex align-items-center" href=""><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View All Events</span></a>
+					</div>
+				</div> -->
+			</div>
+			<div class="row g-0 intro__feed">
 				<div class="col-12 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
@@ -173,7 +187,7 @@
 						</div>
 					</div>
 				</div>
-				<?php for ($i = 0; $i < 12; $i++) : ?>
+				<?php for ($i = 0; $i < 1; $i++) : ?>
 					<div class="col-12 grid-margin stretch-card">
 						<div class="card">
 							<div class="card-body"></div>
@@ -184,6 +198,11 @@
 		</div>
 		<div class="col-lg-3 col-12">
 			<div class="row g-0">
+				<div class="col-12 grid-margin stretch-card">
+					<div class="">
+						<div id="chart"></div>
+					</div>
+				</div>
 				<div class="col-12 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
@@ -198,7 +217,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-12 grid-margin stretch-card">
+				<div class="col-12 grid-margin stretch-card intro__events">
 					<div class="accordion w-100" id="accordionEvents">
 						<div class="accordion-item">
 							<div class="card">
@@ -253,7 +272,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-12 grid-margin stretch-card">
+				<div class="col-12 grid-margin stretch-card intro__holidays">
 					<div class="accordion w-100" id="accordionHolidays">
 						<div class="accordion-item">
 							<div class="card">
@@ -292,3 +311,26 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	var options = {
+		fill: {
+			colors: ['#65ff86', '#6571ff']
+		},
+		series: [30, (8 / 12) * 100],
+		chart: {
+			height: 200,
+			type: 'radialBar',
+		},
+		plotOptions: {
+			radialBar: {
+				hollow: {
+					size: '50%',
+				}
+			},
+		},
+	};
+
+	var chart = new ApexCharts(document.querySelector("#chart"), options);
+	chart.render();
+</script>

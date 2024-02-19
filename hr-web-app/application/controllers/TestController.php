@@ -7,10 +7,14 @@ class TestController extends My_Controller
 			case 'clock':
 				$this->load->view('testing/clock');
 				break;
+			case 'excel':
+				$this->load->model("reports/General_ReportsModel", "ReportsModel");
+				$this->ReportsModel->generate();
+				break;
 			
 			default:
-				# code...
 				break;
 		}
 	}
+
 }

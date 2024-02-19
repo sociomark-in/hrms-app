@@ -9,7 +9,7 @@ class TestController extends My_Controller
 				break;
 			case 'excel':
 				$this->load->model("reports/General_ReportsModel", "ReportsModel");
-				$this->ReportsModel->generate();
+				$this->ReportsModel->generate("filename.xlsx");
 				break;
 			
 			default:

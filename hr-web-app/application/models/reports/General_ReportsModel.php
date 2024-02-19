@@ -21,9 +21,10 @@ class General_ReportsModel extends CI_Model
 	public function get()
 	{
 	}
-	public function generate()
+	public function generate($filename)
 	{
 		$this->load->library('exports/PHPSheets', NULL, "PHPSheets");
-		$this->PHPSheets->write("05featuredemo.xlsx");
+		$this->PHPSheets->save( FCPATH . $filename);
+		force_download(FCPATH . $filename);
 	}
 }

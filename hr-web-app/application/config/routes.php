@@ -53,13 +53,87 @@ $route['default_controller'] = 'HomeController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['test/(:any)'] = "TestController/experiment/$1";
+
 $route['dashboard'] = 'DashboardController/index';
-$route['login'] = 'DashboardController/login';
+$route['login'] = 'AuthController/login';
+
+$route['api/auth/login'] = "AuthController/authenticate";
+
+/*
+==========================
+Requests
+==========================
+work-off/history
+work-off/new 
+
+
+reimbursements
+reimbursements/apply
+
+
+salary-slips
+salary-slips/apply
+
+*/
+$route["work-off/history"] = "RequestsController/work_off/$1";
+$route["work-off/new"] = "RequestsController/work_off/$1";
+$route["reimbursements"] = "RequestsController/reimbursements";
+$route["reimbursements/apply"] = "";
+$route["salary-slips"] = "";
+$route["salary-slips/apply"] = "";
+
+
+
+/*
+==========================
+Request Actions (Admin)
+==========================
+action/request/{:any}/{:action - approve/reject/edit}
+action/send/{:any - }
+*/
 
 /* 
-account/settings/password/forgot-password
-account/settings/password/password-reset
-account/settings/password/new-password
+==========================
+Employees
+==========================
+employees
+employee-database
 */
-$route['account/settings/password/(:any)'] = 'DashboardController/manage_password/$1';
+$route["employees"]="DashboardController/employees";
+$route["attendance"]="DashboardController/attendance";
+$route["employee-database"]="";
+
+/*
+==========================
+Applications
+==========================
+
+Applications > Calendar
+--------------------------
+calendar
+
+
+Applications > Mail Box
+--------------------------
+mail/inbox
+mail/compose
+mail/{chat_id}
+*/
+
+$route['calendar'] = "AppsController/calendar";
+$route['mail/(:any)'] = "AppsController/calendar";
+
+/* 
+==========================
+Settings
+==========================
+
+Settings > Account > Password
+--------------------------
+settings/account/password/forgot-password
+settings/account/password/password-reset
+settings/account/password/new-password
+*/
+$route['settings/account/password/(:any)'] = 'DashboardController/manage_password/$1';
 $route['apps/calendar'] = 'AppsController/calendar';

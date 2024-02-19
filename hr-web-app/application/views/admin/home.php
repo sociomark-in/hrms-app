@@ -199,9 +199,8 @@
 		<div class="col-lg-3 col-12">
 			<div class="row g-0">
 				<div class="col-12 grid-margin stretch-card">
-					<div class="">
-						<div id="chart"></div>
-					</div>
+					
+					<?php $this->load->view("components/theme/widgets/_clock_time") ?>
 				</div>
 				<div class="col-12 grid-margin stretch-card">
 					<div class="card">
@@ -311,26 +310,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	var options = {
-		fill: {
-			colors: ['#65ff86', '#6571ff']
-		},
-		series: [30, (8 / 12) * 100],
-		chart: {
-			height: 200,
-			type: 'radialBar',
-		},
-		plotOptions: {
-			radialBar: {
-				hollow: {
-					size: '50%',
-				}
-			},
-		},
-	};
-
-	var chart = new ApexCharts(document.querySelector("#chart"), options);
-	chart.render();
-</script>

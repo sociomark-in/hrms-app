@@ -23,6 +23,7 @@ date_default_timezone_set('Asia/Calcutta');
 | a PHP script and you can easily do that on your own.
 |
 */
+
 $config['base_url'] = 'https://www.sociomark.in/admin';
 $config['base_url'] = 'http://localhost:8000/hrms-application/hr-web-app';
 

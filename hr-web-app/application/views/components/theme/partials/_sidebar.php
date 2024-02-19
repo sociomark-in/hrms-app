@@ -29,13 +29,10 @@
 				<div class="collapse" id="emails">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>email/inbox" class="nav-link">Inbox</a>
+							<a href="<?= base_url("") ?>mail/inbox" class="nav-link">Inbox</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>email/read" class="nav-link">Read</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>email/compose" class="nav-link">Compose</a>
+							<a href="<?= base_url("") ?>mail/compose" class="nav-link">Compose</a>
 						</li>
 					</ul>
 				</div>
@@ -63,10 +60,7 @@
 				<div class="collapse" id="generalOption">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Attendance</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Alerts</a>
+							<a href="<?= base_url("attendance") ?>" class="nav-link">Attendance</a>
 						</li>
 					</ul>
 				</div>
@@ -80,10 +74,30 @@
 				<div class="collapse" id="workOffs">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Request New</a>
+							<a href="<?= base_url("work-offs/new") ?>" class="nav-link">Request New</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
+							<a href="<?= base_url("work-offs/history/all") ?>" class="nav-link">Work-Off History</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#allRequests" role="button" aria-expanded="false" aria-controls="allRequests">
+					<i class="link-icon" data-feather="navigation"></i>
+					<span class="link-title">Requests</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="allRequests">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("reimbursements") ?>pages/ui-components/accordion" class="nav-link">Reimbursements</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("salary-slips") ?>pages/ui-components/alerts" class="nav-link">Salary Slips</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("salary-slips") ?>pages/ui-components/alerts" class="nav-link">Comp-offs</a>
 						</li>
 					</ul>
 				</div>
@@ -97,10 +111,7 @@
 				<div class="collapse" id="salaryPayroll">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Salary Slips</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
+							<a href="<?= base_url("salary-slips") ?>pages/ui-components/accordion" class="nav-link">Salary Slips</a>
 						</li>
 					</ul>
 				</div>
@@ -170,6 +181,29 @@
 					<i class="link-icon" data-feather="users"></i>
 					<span class="link-title">All Employees</span>
 				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#reportsAll" role="button" aria-expanded="false" aria-controls="reportsAll">
+					<i class="link-icon" data-feather="file"></i>
+					<span class="link-title">Reports</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="reportsAll">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Attendance</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Leaves</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Comp-off</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Half-days</a>
+						</li>
+					</ul>
+				</div>
 			</li>
 
 

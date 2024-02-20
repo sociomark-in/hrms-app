@@ -21,10 +21,16 @@ class General_ReportsModel extends CI_Model
 	public function get()
 	{
 	}
-	public function generate($filename)
+	public function generate($filename, $toBeDownloaded = TRUE)
 	{
 		$this->load->library('exports/PHPSheets', NULL, "PHPSheets");
-		$this->PHPSheets->save( FCPATH . $filename);
-		force_download(FCPATH . $filename);
+		if (!is_dir(FCPATH . 'exports/reports/')) {
+			mkdir(FCPATH . 'exports/reports/', 0777, TRUE);
+		}
+		$this->PHPSheets->save(FCPATH . "exports/reports/" . $filename);
+		if ($toBeDownloaded) {
+			force_download(FCPATH . "exports/reports/" . $filename, NULL);
+			delete_files("exports/reports/" . $filename);
+		}
 	}
 }

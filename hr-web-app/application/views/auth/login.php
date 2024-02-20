@@ -18,14 +18,14 @@
 										<?= form_open("api/auth/login") ?>
 										<div class="mb-3">
 											<label for="userEmail" class="form-label">Employee Id</label>
-											<input type="email" class="form-control" id="userEmail" placeholder="Email">
+											<input type="email" class="form-control" id="userEmail" name="email_emp_id" placeholder="Email">
 										</div>
 										<div class="mb-3">
 											<label for="userPassword" class="form-label">Password</label>
-											<input type="password" class="form-control" id="userPassword" autocomplete="current-password" placeholder="Password">
+											<input type="password" class="form-control" id="userPassword" name="password" autocomplete="current-password" placeholder="Password">
 										</div>
 										<div class="form-check mb-3">
-											<input type="checkbox" class="form-check-input" id="authCheck">
+											<input type="checkbox" class="form-check-input" name="preserve" id="authCheck">
 											<label class="form-check-label" for="authCheck">
 												Remember me
 											</label>

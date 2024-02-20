@@ -2,6 +2,7 @@
 	<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
 		<div>
 			<h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
+			<small><?= get_cookie('app_id') ?></small>
 		</div>
 	</div>
 
@@ -199,8 +200,8 @@
 		<div class="col-lg-3 col-12">
 			<div class="row g-0">
 				<div class="col-12 grid-margin stretch-card">
-					
-					<?php $this->load->view("components/theme/widgets/_clock_time") ?>
+					<?php
+					require APPPATH . "/views/components/theme/widgets/_clock_time.php"; ?>
 				</div>
 				<div class="col-12 grid-margin stretch-card">
 					<div class="card">

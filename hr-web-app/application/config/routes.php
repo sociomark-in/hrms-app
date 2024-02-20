@@ -57,8 +57,10 @@ $route['test/(:any)'] = "TestController/experiment/$1";
 
 $route['dashboard'] = 'DashboardController/index';
 $route['login'] = 'AuthController/login';
+$route['register'] = 'AuthController/register';
 
 $route['api/auth/login'] = "AuthController/authenticate";
+$route['api/action/attendance/(:any)'] = "UserActionController/attendance/$1";
 
 /*
 ==========================

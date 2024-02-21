@@ -21,4 +21,13 @@ class AttendanceModel extends CI_Model
 
 		return json_encode($this->db->get("app_company_attendance")->result_array());
 	}
+
+	public function add($data)
+	{
+		if ($this->db->insert("app_company_attendance", $data)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

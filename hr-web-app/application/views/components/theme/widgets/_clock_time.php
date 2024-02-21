@@ -13,8 +13,11 @@
 			$diff = $clock_time->diff($now);
 			$elapsed_time = (($diff->h + ($diff->i / 60)) / 12) * 100;
 		}
-		if (isset($punch_out_time) && $punch_out_time != "") {
+		 else if (isset($punch_out_time) && $punch_out_time != "") {
 			$isPunchedOut = true;
+			$elapsed_time = 0;
+		} else {
+			$isPunchedIn = false;
 			$elapsed_time = 0;
 		}
 		?>
@@ -48,7 +51,7 @@
 <script>
 	// "9:59:00"
 	$("#punch_in_button").on("click", () => {
-		if ($(this).hasClass('btn-primary')) {
+		if ($("#punch_in_button").hasClass('btn-primary')) {
 			$.ajax({
 				data: {
 					'punch_in_time': "<?= date('H:i:s') ?>",
@@ -57,9 +60,10 @@
 				url: "<?= base_url("api/action/attendance/punch-in") ?>",
 				success: () => {
 					console.log("Succecss");
-					$(this).removeClass("btn-primary")
-					$(this).addClass("btn-danger")
-					$(this).text("Punch in")
+					$("#punch_in_button").removeClass("btn-primary")
+					$("#punch_in_button").addClass("btn-danger")
+					$("#punch_in_button").text("Punch Out")
+					location.reload();
 				},
 				error: () => {
 					console.log("AJAX Error");
@@ -74,9 +78,9 @@
 				url: "<?= base_url("api/action/attendance/punch-out") ?>",
 				success: () => {
 					console.log("Succecss");
-					$(this).removeClass("btn-primary")
-					$(this).addClass("btn-danger")
-					$(this).text("Punch Out")
+					$("#punch_in_button").removeClass("btn-primary")
+					$("#punch_in_button").addClass("btn-danger")
+					$("#punch_in_button").css("display", "none");
 				},
 				error: () => {
 					console.log("AJAX Error");

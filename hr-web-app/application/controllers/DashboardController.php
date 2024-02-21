@@ -23,12 +23,23 @@ class DashboardController extends My_Controller
 		if($user['app_role'] == "admin"){
 			LeavesModel->get(); 
 		*/
-		$attendance =json_decode($this->AttendanceModel->get(NULL, ['app_id' => get_cookie("app_id"), "attendance_date" => date("y-m-d"), "emp_id" => "1"], NULL, "today"), true)[0];
-		$this->data["attendance"] = [
-			"date" => $attendance["attendance_date"],
-			"time_in" => $attendance["timepunchIn"],
-			"time_out" => $attendance["timepunchOut"],
-		];
+		$this->_auth_();
+		$attendance = json_decode($this->AttendanceModel->get(NULL, ['app_id' => get_cookie("app_id"), "attendance_date" => date("y-m-d"), "emp_id" => "1"], NULL, "today"), true);
+		if(count($attendance) > 0){
+			$attendance = $attendance[0];
+			$this->data["attendance"] = [
+				"date" => $attendance["attendance_date"],
+				"time_in" => $attendance["timepunchIn"],
+				"time_out" => $attendance["timepunchOut"],
+			];
+		} else {
+			$this->data["attendance"] = [
+				"date" => date("y-m-d"),
+				"time_in" => NULL,
+				"time_out" => NULL,
+			];
+
+		}
 		// $this->data["attendance"]["punch_time"] = "10:02:30";
 		$this->load->employee_dashboard("admin/home", $this->data);
 
@@ -41,6 +52,9 @@ class DashboardController extends My_Controller
 
 	public function attendance()
 	{
+		echo "<pre>";
+		print_r($this->session->userdata);
+		echo "</pre>";
 		die;
 		if(NULL != $this->input->get('userid')){
 			$this->load->admin_dashboard("admin/attendance", $this->data);
@@ -48,4 +62,10 @@ class DashboardController extends My_Controller
 			$this->load->employee_dashboard("admin/attendance", $this->data);
 		}
 	}
+
+	public function employees()
+	{
+		
+	}
+
 }

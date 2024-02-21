@@ -55,6 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['test/(:any)'] = "TestController/experiment/$1";
 
+
+$route['onboarding/home'] = "OnboardingController/home";
+
 $route['dashboard'] = 'DashboardController/index';
 $route['login'] = 'AuthController/login';
 $route['register'] = 'AuthController/register';

@@ -1,11 +1,11 @@
 <div class="page-content">
+
 	<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
 		<div>
 			<h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
 			<small><?= get_cookie('app_id') ?></small>
 		</div>
 	</div>
-
 	<div class="row">
 		<div class="col-lg-3 col-12">
 			<div class="row">
@@ -206,10 +206,15 @@
 				<div class="col-12 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
-							<div class="d-flex justify-content-between align-items-baseline mb-1">
+							<div class="d-flex justify-content-between align-items-baseline mb-3">
 								<h6 class="card-title mb-0">Greetings!!</h6>
 							</div>
 							<div class="row">
+								<div class="col-12">
+									<figure class="overflow-hidden d-flex justify-content-center">
+										<img src="https://placehold.co/350x200" alt="Placeholder Banner">
+									</figure>
+								</div>
 								<div class="col-12">
 									<h2 class="text-primary">Happy Birthday / Happy Anniversary</h2>
 								</div>

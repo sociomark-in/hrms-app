@@ -1,6 +1,6 @@
 
 <!-- core:js -->
-<script src="<?= base_url("assets") ?>/vendors/core/core.js"></script>
+<!-- <script src="<?= base_url("assets") ?>/vendors/core/core.js"></script> -->
 <!-- endinject -->
 
 <!-- Plugin js for this page -->

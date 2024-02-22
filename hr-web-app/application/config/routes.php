@@ -64,6 +64,10 @@ $route['register'] = 'AuthController/register';
 
 $route['api/auth/login'] = "AuthController/authenticate";
 $route['api/action/attendance/(:any)'] = "UserActionController/attendance/$1";
+$route['api/action/app-settings/(:any)'] = "CompanySettingsController/appSettings/$1";
+
+$route['settings/app-settings/(:any)'] = "CompanySettingsController/appSettings/$1";
+
 
 /*
 ==========================

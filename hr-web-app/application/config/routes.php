@@ -62,6 +62,8 @@ $route['dashboard'] = 'DashboardController/index';
 $route['login'] = 'AuthController/login';
 $route['register'] = 'AuthController/register';
 
+$route['profile'] = "UserAccountController/profile";
+
 $route['api/auth/login'] = "AuthController/authenticate";
 $route['api/action/attendance/(:any)'] = "UserActionController/attendance/$1";
 $route['api/action/app-settings/(:any)'] = "CompanySettingsController/appSettings/$1";

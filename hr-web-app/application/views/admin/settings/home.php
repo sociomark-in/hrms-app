@@ -1,14 +1,14 @@
 <div class="page-content">
 	<nav class="page-breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Company Settings</li>
+			<li class="breadcrumb-item"><a href="<?= base_url("dashboard") ?>">Dashboard</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Application Settings</li>
 		</ol>
 	</nav>
 	<div class="row m-0">
 		<div class="col-xxl-10 col-xl-9 col-12 grid-margin">
-			<!-- Company Settings -->
 			<div class="row m-0">
+				<!-- Company Settings -->
 				<div class="col-lg-6 col-12 grid-margin">
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
@@ -27,7 +27,7 @@
 								</tr>
 								<tr>
 									<td>Company Logo</td>
-									<td><?= FCPATH ?></td>
+									<td>Yes</td>
 								</tr>
 								<tr>
 									<td>Company Address</td>
@@ -49,6 +49,8 @@
 						</div>
 					</fieldset>
 				</div>
+
+				<!-- Holidays, Attendance & Leaves -->
 				<div class="col-lg-6 col-12 grid-margin">
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
@@ -62,37 +64,36 @@
 						<div class="">
 							<table class="table table-sm table-striped">
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Attendance Enabled</td>
+									<td>Yes</td>
 								</tr>
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Track Shift Timings</td>
+									<td>Yes</td>
 								</tr>
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Weekends</td>
+									<td>NA</td>
 								</tr>
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Types of Leaves</td>
+									<td>NA</td>
 								</tr>
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Holidays</td>
+									<td>12 Days Added</td>
 								</tr>
 							</table>
 						</div>
 					</fieldset>
 				</div>
-			</div>
-			<!-- Payroll Settings -->
-			<div class="row m-0">
+
+				<!-- Payroll Settings -->
 				<div class="col-lg-6 col-12 grid-margin">
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
 							<div>
-								<h4 class="mb-3 mb-md-0">Payroll Setup</h4>
+								<h4 class="mb-3 mb-md-0">Payroll, Salary & Reimbursements Setup</h4>
 							</div>
 							<div>
 								<a href="<?= base_url("settings/app-settings/payroll") ?>" class="btn btn-sm btn-outline-primary text-uppercase">Edit Settings</a>
@@ -101,72 +102,35 @@
 						<div class="">
 							<table class="table table-sm table-striped">
 								<tr>
-									<td>Name</td>
-									<td>Company Name</td>
+									<td>Payslip Alert</td>
+									<td>10th of Every Month</td>
 								</tr>
 								<tr>
-									<td>Company Logo</td>
-									<td><?= FCPATH ?></td>
+									<td>Advance Salary Requests</td>
+									<td>Disabled</td>
 								</tr>
 								<tr>
-									<td>Company Address</td>
-									<td>N/A</td>
+									<td>Salary Structure</td>
+									<td>Default</td>
 								</tr>
 								<tr>
-									<td>GSTIN</td>
-									<td>N/A</td>
+									<td>Bonus Types</td>
+									<td>6 Bonuses Selected</td>
 								</tr>
 								<tr>
-									<td>PAN</td>
-									<td>N/A</td>
+									<td>Payslip Receipts</td>
+									<td>13th of Every Month</td>
 								</tr>
 								<tr>
-									<td>TAN</td>
-									<td>N/A</td>
+									<td>Reimbursement Requests</td>
+									<td>Enabled - Bill Required</td>
 								</tr>
 							</table>
 						</div>
 					</fieldset>
 				</div>
-				<div class="col-lg-6 col-12 grid-margin">
-					<fieldset>
-						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
-							<div>
-								<h4 class="mb-3 mb-md-0">Salary, Reimburstments & Compliance Setup</h4>
-							</div>
-							<div>
-								<a href="<?= base_url("settings/app-settings/salary") ?>" class="btn btn-sm btn-outline-primary text-uppercase">Edit Settings</a>
-							</div>
-						</legend>
-						<div class="">
-							<table class="table table-sm table-striped">
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-							</table>
-						</div>
-					</fieldset>
-				</div>
-			</div>
-			<!-- Employee Settings -->
-			<div class="row m-0">
+
+				<!-- Employee Settings -->
 				<div class="col-lg-6 col-12 grid-margin">
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
@@ -207,29 +171,8 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="col-lg-6 col-12 grid-margin">
-					<fieldset>
-						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
-							<div>
-								<h4 class="mb-3 mb-md-0">Documents Setup</h4>
-							</div>
-							<div>
-								<a href="<?= base_url("settings/app-settings/documents") ?>" class="btn btn-sm btn-outline-primary text-uppercase">Edit Settings</a>
-							</div>
-						</legend>
-						<div class="">
-							<table class="table table-sm table-striped">
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-							</table>
-						</div>
-					</fieldset>
-				</div>
-			</div>
-			<!-- Other Settings -->
-			<div class="row m-0">
+
+				<!-- Other Settings -->
 				<div class="col-lg-6 col-12 grid-margin">
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
@@ -254,21 +197,22 @@
 						</div>
 					</fieldset>
 				</div>
+				<!-- Documents & Templates -->
 				<div class="col-lg-6 col-12 grid-margin">
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
 							<div>
-								<h4 class="mb-3 mb-md-0">Documents Templates</h4>
+								<h4 class="mb-3 mb-md-0">Documents, Letters & Other Templates</h4>
 							</div>
 							<div>
-								<a href="<?= base_url("settings/app-settings/templates") ?>" class="btn btn-sm btn-outline-primary text-uppercase">Edit Settings</a>
+								<a href="<?= base_url("settings/app-settings/documents") ?>" class="btn btn-sm btn-outline-primary text-uppercase">Edit Settings</a>
 							</div>
 						</legend>
 						<div class="">
 							<table class="table table-sm table-striped">
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Document Types</td>
+									<td>5 Document Types Added</td>
 								</tr>
 								<tr>
 									<td>Setting</td>

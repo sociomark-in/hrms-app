@@ -2,6 +2,7 @@
 // 
 class CompanySettingsController extends My_Controller
 {
+	public $data;
 	public function __construct()
 	{
 		parent::__construct();
@@ -20,7 +21,9 @@ class CompanySettingsController extends My_Controller
 				break;
 
 			case 'attendance':
-				$this->load->admin_dashboard('admin/settings/attendance');
+				$this->load->model("org_settings/HolidaysModel");
+				$this->data['org_holidays'] = json_decode($this->HolidaysModel->get(["title", "from_date", "to_date"]), true);
+				$this->load->admin_dashboard('admin/settings/attendance', $this->data);
 				break;
 
 			case 'payroll':
@@ -40,11 +43,11 @@ class CompanySettingsController extends My_Controller
 				break;
 
 			case 'roles':
-				$this->load->admin_dashboard('admin/settings/employee');
+				$this->load->admin_dashboard('admin/settings/roles');
 				break;
 
 			case 'templates':
-				$this->load->admin_dashboard('admin/settings/documents');
+				$this->load->admin_dashboard('admin/settings/templates');
 				break;
 
 			default:

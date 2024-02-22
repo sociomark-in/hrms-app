@@ -354,7 +354,7 @@
 								<div class="step-footer">
 									<button type="button" data-step-action="prev" class="step-btn btn btn-sm btn-secondary">Back</button>
 									<button type="button" data-step-action="next" class="step-btn btn btn-sm btn-primary">Confirm & Proceed</button>
-									<button type="submit" id="onboardingStepOneSubmit" data-step-action="finish" class="step-btn btn-sm btn btn-primary">Submit</button>
+									<button type="button" id="onboardingStepOneSubmit" data-step-action="finish" class="step-btn btn-sm btn btn-primary">Submit</button>
 								</div>
 								<?= form_close() ?>
 							</div>
@@ -392,7 +392,7 @@
 											method: "POST",
 											success: () => {
 												console.log("AJAX Success");
-												window.location.replace("<?= base_url('settings/app-settings/general') ?>")
+												window.location.replace("<?= base_url('settings/app-settings/home') ?>")
 											},
 											error: () => {
 												console.log("AJAX ERROR!");

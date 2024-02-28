@@ -8,7 +8,9 @@
 							<div class="row">
 								<div class="col-md-4 pe-md-0">
 									<div class="auth-side-wrapper">
-
+										<!-- <figure class="overflow-hidden d-flex justify-content-center">
+											<img src="https://placehold.co/220x455" alt="Placeholder Banner">
+										</figure> -->
 									</div>
 								</div>
 								<div class="col-md-8 ps-md-0">

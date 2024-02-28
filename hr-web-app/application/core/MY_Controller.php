@@ -6,6 +6,7 @@ class My_Controller extends CI_Controller
 {
 	public function __construct()
 	{
+		defined('COMPANY_NAME') OR define("COMPANY_NAME", "Sociomark");
 		parent::__construct();
 		if (!is_https()) {
 			$this->session->set_flashdata('http_error', 'Please change url to HTTPS!!');

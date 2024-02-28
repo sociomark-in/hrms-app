@@ -6,7 +6,7 @@
 		</ol>
 	</nav>
 	<div class="row">
-		<div class="col-lg-3 col-md-6 col-12">
+		<div class="col-lg-3 col-md-6 col-12 grid-margin">
 			<div class="card">
 				<div class="card-body">
 					<table id="example" class="display table" style="width:100%">
@@ -41,7 +41,7 @@
 				});
 			</script>
 		</div>
-		<div class="col-lg-9 col-md-6 col-12">
+		<div class="col-lg-9 col-md-6 col-12 grid-margin">
 			<div class="card- card-body">
 				<div id='fullcalendar'></div>
 			</div>

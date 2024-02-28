@@ -53,7 +53,13 @@
 											</div>
 										</div>
 										<div class="row m-0">
-											<div class="col-12 grid-margin">
+											<div class="col-md-6 col-12 grid-margin">
+												<div class="">
+													<label for="formInput" class="form-label">Your Name</label>
+													<input type="text" name="company_details[name]" id="formInput1" class="form-control" required>
+												</div>
+											</div>
+											<div class="col-md-6  grid-margin">
 												<div class="">
 													<label for="formInput" class="form-label">Email Address</label>
 													<input type="email" data-inputmask="'alias': 'email'" name="company_details[email]" id="formInput2" class="form-control" required>
@@ -61,7 +67,7 @@
 											</div>
 											<div class="col-xl-4 col-md-6 col-12 grid-margin">
 												<div class="">
-													<label for="formInput" class="form-label">Your Name</label>
+													<label for="formInput" class="form-label">Company Name</label>
 													<input type="text" name="company_details[name]" id="formInput1" class="form-control" required>
 												</div>
 											</div>

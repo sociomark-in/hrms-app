@@ -1,4 +1,8 @@
 <div class="page-content">
+	<?php
+	$local_session = $this->session->userdata("local");
+	$name = implode(" ", [$local_session['user']['first_name'], $local_session['user']['last_name']]);
+	?>
 	<div class="row">
 		<div class="col-12 grid-margin">
 			<div class="card">
@@ -8,8 +12,8 @@
 					</figure>
 					<div class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
 						<div>
-							<img class="wd-70 rounded-circle" src="https://placehold.co/100x100" alt="profile">
-							<span class="h4 ms-3 text-dark">Amiah Burton</span>
+							<img class="wd-70 rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode($name) ?>" alt="profile">
+							<span class="h4 ms-3 text-dark"><?= $name ?></span>
 						</div>
 						<div class="d-none d-md-block">
 							<button class="btn btn-primary btn-icon-text">
@@ -98,98 +102,45 @@
 		<!-- middle wrapper start -->
 		<div class="col-md-8 col-xl-6 middle-wrapper">
 			<div class="row">
-				<div class="col-md-12 grid-margin">
-					<div class="card rounded">
-						<div class="card-header">
-							<div class="d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
-									<div class="ms-2">
-										<p>Mike Popescu</p>
-										<p class="tx-11 text-muted">1 min ago</p>
+				<?php for ($i = 0; $i < 10; $i++) : ?>
+					<div class="col-md-12 grid-margin">
+						<div class="card rounded">
+							<div class="card-header">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
+										<div class="ms-2">
+											<p>Mike Popescu</p>
+											<p class="tx-11 text-muted">1 min ago</p>
+										</div>
 									</div>
-								</div>
-								<div class="dropdown">
-									<a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<i class="icon-lg pb-3px" data-feather="more-horizontal"></i>
-									</a>
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="meh" class="icon-sm me-2"></i> <span class="">Unfollow</span></a>
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="corner-right-up" class="icon-sm me-2"></i> <span class="">Go to post</span></a>
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="share-2" class="icon-sm me-2"></i> <span class="">Share</span></a>
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="copy" class="icon-sm me-2"></i> <span class="">Copy link</span></a>
+									<div class="dropdown">
+										<a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="icon-lg pb-3px" data-feather="more-horizontal"></i>
+										</a>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+											<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="meh" class="icon-sm me-2"></i> <span class="">Unfollow</span></a>
+											<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="corner-right-up" class="icon-sm me-2"></i> <span class="">Go to post</span></a>
+											<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="share-2" class="icon-sm me-2"></i> <span class="">Share</span></a>
+											<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="copy" class="icon-sm me-2"></i> <span class="">Copy link</span></a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card-body">
-							<p class="mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus minima delectus nemo unde quae recusandae assumenda.</p>
-							<img class="img-fluid" src="https://placehold.co/689x430" alt="">
-						</div>
-						<div class="card-footer">
-							<div class="d-flex post-actions">
-								<a href="javascript:;" class="d-flex align-items-center text-muted me-4">
-									<i class="icon-md" data-feather="heart"></i>
-									<p class="d-none d-md-block ms-2">Like</p>
-								</a>
-								<a href="javascript:;" class="d-flex align-items-center text-muted me-4">
-									<i class="icon-md" data-feather="message-square"></i>
-									<p class="d-none d-md-block ms-2">Comment</p>
-								</a>
-								<a href="javascript:;" class="d-flex align-items-center text-muted">
-									<i class="icon-md" data-feather="share"></i>
-									<p class="d-none d-md-block ms-2">Share</p>
-								</a>
+							<div class="card-body">
+								<p class="tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus minima delectus nemo unde quae recusandae assumenda.</p>
+							</div>
+							<div class="card-footer">
+								<div class="d-flex post-actions">
+									<a href="javascript:;" class="d-flex align-items-center text-muted me-4">
+										<i class="icon-md" data-feather="heart"></i>
+										<p class="d-none d-md-block ms-2">Like</p>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="card rounded">
-						<div class="card-header">
-							<div class="d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
-									<div class="ms-2">
-										<p>Mike Popescu</p>
-										<p class="tx-11 text-muted">5 min ago</p>
-									</div>
-								</div>
-								<div class="dropdown">
-									<a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<i class="icon-lg pb-3px" data-feather="more-horizontal"></i>
-									</a>
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="meh" class="icon-sm me-2"></i> <span class="">Unfollow</span></a>
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="corner-right-up" class="icon-sm me-2"></i> <span class="">Go to post</span></a>
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="share-2" class="icon-sm me-2"></i> <span class="">Share</span></a>
-										<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="copy" class="icon-sm me-2"></i> <span class="">Copy link</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-body">
-							<p class="mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							<img class="img-fluid" src="https://placehold.co/689x430" alt="">
-						</div>
-						<div class="card-footer">
-							<div class="d-flex post-actions">
-								<a href="javascript:;" class="d-flex align-items-center text-muted me-4">
-									<i class="icon-md" data-feather="heart"></i>
-									<p class="d-none d-md-block ms-2">Like</p>
-								</a>
-								<a href="javascript:;" class="d-flex align-items-center text-muted me-4">
-									<i class="icon-md" data-feather="message-square"></i>
-									<p class="d-none d-md-block ms-2">Comment</p>
-								</a>
-								<a href="javascript:;" class="d-flex align-items-center text-muted">
-									<i class="icon-md" data-feather="share"></i>
-									<p class="d-none d-md-block ms-2">Share</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php endfor ?>
 			</div>
 		</div>
 		<!-- middle wrapper end -->
@@ -256,7 +207,7 @@
 							<h6 class="card-title">suggestions for you</h6>
 							<div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
 								<div class="d-flex align-items-center hover-pointer">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
+									<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
 									<div class="ms-2">
 										<p>Mike Popescu</p>
 										<p class="tx-11 text-muted">12 Mutual Friends</p>
@@ -266,7 +217,7 @@
 							</div>
 							<div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
 								<div class="d-flex align-items-center hover-pointer">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
+									<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
 									<div class="ms-2">
 										<p>Mike Popescu</p>
 										<p class="tx-11 text-muted">12 Mutual Friends</p>
@@ -276,7 +227,7 @@
 							</div>
 							<div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
 								<div class="d-flex align-items-center hover-pointer">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
+									<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
 									<div class="ms-2">
 										<p>Mike Popescu</p>
 										<p class="tx-11 text-muted">12 Mutual Friends</p>
@@ -286,7 +237,7 @@
 							</div>
 							<div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
 								<div class="d-flex align-items-center hover-pointer">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
+									<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
 									<div class="ms-2">
 										<p>Mike Popescu</p>
 										<p class="tx-11 text-muted">12 Mutual Friends</p>
@@ -296,7 +247,7 @@
 							</div>
 							<div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
 								<div class="d-flex align-items-center hover-pointer">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
+									<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
 									<div class="ms-2">
 										<p>Mike Popescu</p>
 										<p class="tx-11 text-muted">12 Mutual Friends</p>
@@ -306,7 +257,7 @@
 							</div>
 							<div class="d-flex justify-content-between">
 								<div class="d-flex align-items-center hover-pointer">
-									<img class="img-xs rounded-circle" src="https://placehold.co/37x37" alt="">
+									<img class="img-xs rounded-circle" src="https://ui-avatars.com/api/?background=a0a0a0&bold=true&name=<?= urlencode("Mike Popescu") ?>" alt="">
 									<div class="ms-2">
 										<p>Mike Popescu</p>
 										<p class="tx-11 text-muted">12 Mutual Friends</p>

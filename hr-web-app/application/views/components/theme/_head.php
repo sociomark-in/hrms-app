@@ -24,8 +24,8 @@
 <link href="https://cdn.datatables.net/v/bs5/dt-2.0.0/datatables.min.css" rel="stylesheet"> 
 <script src="https://cdn.datatables.net/v/bs5/dt-2.0.0/datatables.min.js"></script>
 
-<link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/datatables.net-bs5/dataTables.bootstrap5.css">
-<link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/datatables.net-bs5/dataTables.bootstrap5.js">
+<!-- <link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/datatables.net-bs5/dataTables.bootstrap5.css">
+<link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/datatables.net-bs5/dataTables.bootstrap5.js"> -->
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.2/apexcharts.min.css" integrity="sha512-qc0GepkUB5ugt8LevOF/K2h2lLGIloDBcWX8yawu/5V8FXSxZLn3NVMZskeEyOhlc6RxKiEj6QpSrlAoL1D3TA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,6 +37,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js" integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Plugin: JQuery Validator  -->
+
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
+
+<!-- Plugin: JQuery daterangepicker  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.css" />
+<!-- Plugin: JQuery daterangepicker  -->
 
 <!-- inject:css -->
 <link rel="stylesheet" href="<?= base_url("assets") ?>/fonts/feather-font/css/iconfont.css">

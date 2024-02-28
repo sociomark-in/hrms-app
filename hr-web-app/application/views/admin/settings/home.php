@@ -144,28 +144,16 @@
 						<div class="">
 							<table class="table table-sm table-striped">
 								<tr>
-									<td>Name</td>
-									<td>Company Name</td>
+									<td>Employee Directory</td>
+									<td>01/50 Employees</td>
 								</tr>
 								<tr>
-									<td>Company Logo</td>
-									<td><?= FCPATH ?></td>
+									<td>Custom Employee IDs</td>
+									<td>No</td>
 								</tr>
 								<tr>
-									<td>Company Address</td>
-									<td>N/A</td>
-								</tr>
-								<tr>
-									<td>GSTIN</td>
-									<td>N/A</td>
-								</tr>
-								<tr>
-									<td>PAN</td>
-									<td>N/A</td>
-								</tr>
-								<tr>
-									<td>TAN</td>
-									<td>N/A</td>
+									<td>Employee Details</td>
+									<td>Enabled</td>
 								</tr>
 							</table>
 						</div>
@@ -177,7 +165,7 @@
 					<fieldset>
 						<legend class="d-flex justify-content-between align-items-center flex-wrap grid-margin mb-2">
 							<div>
-								<h4 class="mb-3 mb-md-0">User Roles</h4>
+								<h4 class="mb-3 mb-md-0">Departments & Designations</h4>
 							</div>
 							<div>
 								<a href="<?= base_url("settings/app-settings/roles") ?>" class="btn btn-sm btn-outline-primary text-uppercase">Edit Settings</a>
@@ -186,12 +174,12 @@
 						<div class="">
 							<table class="table table-sm table-striped">
 								<tr>
-									<td>Name</td>
-									<td>Company Name</td>
+									<td>Departments</td>
+									<td>NA</td>
 								</tr>
 								<tr>
-									<td>Company Logo</td>
-									<td><?= FCPATH ?></td>
+									<td>Designations / Roles</td>
+									<td>NA</td>
 								</tr>
 							</table>
 						</div>
@@ -215,12 +203,8 @@
 									<td>5 Document Types Added</td>
 								</tr>
 								<tr>
-									<td>Setting</td>
-									<td>value</td>
-								</tr>
-								<tr>
-									<td>Setting</td>
-									<td>value</td>
+									<td>Compulsary Documents</td>
+									<td>None Selected</td>
 								</tr>
 							</table>
 						</div>
@@ -231,7 +215,7 @@
 		<div class="col-xxl-2 col-xl-3 col-12 grid-margin">
 			<div class="bg-light p-3">
 				<div class="mb-3">
-					<h4>Settings</h4>
+					<h5>Company Application Settings</h5>
 				</div>
 				<div class="desc">
 					<p>

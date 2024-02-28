@@ -38,10 +38,12 @@ class DashboardController extends My_Controller
 				"time_in" => NULL,
 				"time_out" => NULL,
 			];
-
 		}
+		$this->data['page'] = [
+			"title" => "Dashboard" . " - " . COMPANY_NAME
+		];
 		// $this->data["attendance"]["punch_time"] = "10:02:30";
-		$this->load->employee_dashboard("admin/home", $this->data);
+		$this->load->employee_dashboard("employee/home", $this->data);
 
 		/*
 		else
@@ -52,20 +54,23 @@ class DashboardController extends My_Controller
 
 	public function attendance()
 	{
-		echo "<pre>";
-		print_r($this->session->userdata);
-		echo "</pre>";
-		die;
+		$this->data["local"] = $this->session->userdata;
+		$this->data['page'] = [
+			"title" => "Timing, Attendance & Leaves" . " - " . COMPANY_NAME
+		];
 		if(NULL != $this->input->get('userid')){
 			$this->load->admin_dashboard("admin/attendance", $this->data);
 		} else {
-			$this->load->employee_dashboard("admin/attendance", $this->data);
+			$this->load->employee_dashboard("employee/attendance", $this->data);
 		}
 	}
-
+	
 	public function employees()
 	{
-		
+		$this->data['page'] = [
+			"title" => "All Employees" . " - " . COMPANY_NAME
+		];
+		$this->load->admin_dashboard("general/employees_list", $this->data);
 	}
 
 }

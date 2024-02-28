@@ -33,4 +33,6 @@ class MY_Loader extends CI_Loader
 		$this->view($view, $vars);
 		$this->view('layout/_2_mini', $vars);
 	}
+
+	
 }

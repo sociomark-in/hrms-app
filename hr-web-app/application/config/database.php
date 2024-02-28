@@ -112,7 +112,6 @@ $db['dev'] = array(
 	'encrypt' => FALSE,
 	'compress' => FALSE,
 	'stricton' => FALSE,
-	'port' => 3300,
 	'failover' => array(),
 	'save_queries' => TRUE
 );

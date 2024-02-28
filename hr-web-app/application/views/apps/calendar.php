@@ -32,8 +32,9 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
-				<div class="col-12 col-md-9">
+				<div class="col-md col-12">
 					<div class="card">
 						<div class="card-body">
 							<div id='fullcalendar'></div>
@@ -94,10 +95,19 @@
 	$(function() {
 
 		// sample calendar events data
-
 		var Draggable = FullCalendar.Draggable;
-		var calendarEl = document.getElementById('fullcalendar');
+
 		var containerEl = document.getElementById('external-events');
+		new Draggable(containerEl, {
+			itemSelector: '.fc-event',
+			eventData: function(eventEl) {
+				return {
+					title: eventEl.innerText
+				};
+			}
+		});
+
+		var calendarEl = document.getElementById('fullcalendar');
 
 		var curYear = moment().format('YYYY');
 		var curMonth = moment().format('MM');
@@ -252,16 +262,6 @@
 			]
 		};
 
-		new Draggable(containerEl, {
-			itemSelector: '.fc-event',
-			eventData: function(eventEl) {
-				return {
-					title: eventEl.innerText
-				};
-			}
-		});
-
-
 		// initialize the calendar
 		var calendar = new FullCalendar.Calendar(calendarEl, {
 			headerToolbar: {
@@ -285,8 +285,13 @@
 			events: [],
 			eventSources: [calendarEvents, birthdayEvents, holidayEvents, discoveredEvents, meetupEvents, otherEvents],
 			drop: function(info) {
+				console.log(info);
 				// remove the element from the "Draggable Events" list
 				// info.draggedEl.parentNode.removeChild(info.draggedEl);
+			},
+			eventResize: function(info){
+				var eventObj = info.event;
+				console.log(info);
 			},
 			eventClick: function(info) {
 				var eventObj = info.event;

@@ -111,7 +111,8 @@ Employees
 employees
 employee-database
 */
-$route["employees"]="DashboardController/employees";
+$route["employees"]="EmployeeMgmtController/home";
+$route["employees/add"]="EmployeeMgmtController/new_employee";
 $route["attendance"]="DashboardController/attendance";
 $route["employee-database"]="";
 

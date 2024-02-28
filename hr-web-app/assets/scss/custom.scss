@@ -64,6 +64,15 @@ $white: #fff;
 	}
 }
 
+/* DataTable */
+.dt-paging{
+	float: right;
+	padding: 0.5rem 0;
+}
+.dt-info, .dt-length{
+	float: left;
+	padding: 0.5rem 0;
+}
 .introjs-tooltip {
 	&.introjs-floating {
 	}

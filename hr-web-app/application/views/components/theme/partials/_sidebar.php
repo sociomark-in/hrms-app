@@ -70,6 +70,26 @@
 				</div>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#employeesAll" role="button" aria-expanded="false" aria-controls="employeesAll">
+					<i class="link-icon" data-feather="users"></i>
+					<span class="link-title">Employees</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="employeesAll">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("employees") ?>" class="nav-link">Employees</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("") ?>" class="nav-link">Departments</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("") ?>" class="nav-link">Designations</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" data-bs-toggle="collapse" href="#requestAll" role="button" aria-expanded="false" aria-controls="requestAll">
 					<i class="link-icon" data-feather="navigation"></i>
 					<span class="link-title">Requests</span>
@@ -93,12 +113,12 @@
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#salaryPayroll" role="button" aria-expanded="false" aria-controls="salaryPayroll">
+				<a class="nav-link" data-bs-toggle="collapse" href="#adminPayroll" role="button" aria-expanded="false" aria-controls="adminPayroll">
 					<i class="link-icon" data-feather="credit-card"></i>
 					<span class="link-title">Payroll</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="salaryPayroll">
+				<div class="collapse" id="adminPayroll">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
 							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Salary Slips</a>
@@ -109,43 +129,8 @@
 					</ul>
 				</div>
 			</li>
-			<li class="nav-item">
-				<a href="<?= base_url("employees") ?>" class="nav-link">
-					<i class="link-icon" data-feather="users"></i>
-					<span class="link-title">All Employees</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#reportsAll" role="button" aria-expanded="false" aria-controls="reportsAll">
-					<i class="link-icon" data-feather="file"></i>
-					<span class="link-title">Reports</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
-				</a>
-				<div class="collapse" id="reportsAll">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Attendance</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Leaves</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Comp-off</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Half-days</a>
-						</li>
-					</ul>
-				</div>
-			</li>
 
 			<li class="nav-item nav-category">Organization</li>
-			<li class="nav-item">
-				<a href="<?= base_url("employees") ?>" class="nav-link">
-					<i class="link-icon" data-feather="users"></i>
-					<span class="link-title">All Employees</span>
-				</a>
-			</li>
 			<li class="nav-item <?= (str_contains(explode(base_url(), current_url())[1], "settings/app-settings")) ? "active" : "" ?>">
 				<a href="<?= base_url("settings/app-settings/home") ?>" class="nav-link">
 					<i class="link-icon" data-feather="settings"></i>

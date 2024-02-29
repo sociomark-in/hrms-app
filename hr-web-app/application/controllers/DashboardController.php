@@ -67,10 +67,7 @@ class DashboardController extends My_Controller
 	
 	public function employees()
 	{
-		$this->data['page'] = [
-			"title" => "All Employees" . " - " . COMPANY_NAME
-		];
-		$this->load->admin_dashboard("general/employees_list", $this->data);
+		
 	}
 
 }

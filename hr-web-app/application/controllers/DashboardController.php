@@ -40,7 +40,7 @@ class DashboardController extends My_Controller
 			];
 		}
 		$this->data['page'] = [
-			"title" => "Dashboard" . " - " . COMPANY_NAME
+			"title" => "Dashboard" . " - " . $this->COMPANY_NAME
 		];
 		// $this->data["attendance"]["punch_time"] = "10:02:30";
 		$this->load->employee_dashboard("employee/home", $this->data);
@@ -56,7 +56,7 @@ class DashboardController extends My_Controller
 	{
 		$this->data["local"] = $this->session->userdata;
 		$this->data['page'] = [
-			"title" => "Timing, Attendance & Leaves" . " - " . COMPANY_NAME
+			"title" => "Timing, Attendance & Leaves" . " - " . $this->COMPANY_NAME
 		];
 		if(NULL != $this->input->get('userid')){
 			$this->load->admin_dashboard("admin/attendance", $this->data);

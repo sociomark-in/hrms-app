@@ -4,10 +4,12 @@ date_default_timezone_set("Asia/Kolkata");
 
 class My_Controller extends CI_Controller
 {
+	public $COMPANY_NAME = "";
 	public function __construct()
 	{
-		defined('COMPANY_NAME') OR define("COMPANY_NAME", "Sociomark");
+
 		parent::__construct();
+		$this->COMPANY_NAME = "Sociomark";
 		if (!is_https()) {
 			$this->session->set_flashdata('http_error', 'Please change url to HTTPS!!');
 		}

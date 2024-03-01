@@ -15,8 +15,7 @@
 }
 
 input.error {
-  -webkit-box-shadow: 0 0 0 0.1rem rgba(255, 0, 0, 0.1);
-          box-shadow: 0 0 0 0.1rem rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 0 0.1rem rgba(255, 0, 0, 0.1);
 }
 
 label.error {

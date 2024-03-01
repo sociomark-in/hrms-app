@@ -13,11 +13,35 @@ class EmployeeMgmtController extends My_Controller
 	public function home()
 	{
 		$this->data['page'] = [
-			"title" => "All Employees" . " - " . COMPANY_NAME
+			"title" => "Employee Management" . " - " . $this->COMPANY_NAME
 		];
-		$this->load->admin_dashboard("general/employees_list", $this->data);
+		$this->load->admin_dashboard("admin/employee/employees_list", $this->data);
 	}
 	public function new_employee()
 	{
+		$this->data['control_options'] = [
+			'fields' => ["first_name", "last_name", "email", "mobile", "dob", "gender", "photo"]
+		];
+		$this->data['page'] = [
+			"title" => "All Employees" . " - " . $this->COMPANY_NAME
+		];
+		$this->load->admin_dashboard("admin/employee/new_employee", $this->data);
+	}
+
+	public function add_employee() {
+		redirect("employee-management/employees/add/success");
+	}
+
+	public function add_action_status($status)
+	{
+		switch ($status) {
+			case 'success':
+				$this->load->admin_dashboard("status/employee_add_success", $this->data);
+				break;
+			
+			default:
+				# code...
+				break;
+		}
 	}
 }

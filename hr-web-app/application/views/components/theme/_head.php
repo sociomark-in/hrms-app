@@ -13,6 +13,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <!-- core:css -->
 <link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/core/core.css">
@@ -23,10 +24,6 @@
 
 <link href="https://cdn.datatables.net/v/bs5/dt-2.0.0/datatables.min.css" rel="stylesheet"> 
 <script src="https://cdn.datatables.net/v/bs5/dt-2.0.0/datatables.min.js"></script>
-
-<!-- <link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/datatables.net-bs5/dataTables.bootstrap5.css">
-<link rel="stylesheet" href="<?= base_url("assets") ?>/vendors/datatables.net-bs5/dataTables.bootstrap5.js"> -->
-
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.2/apexcharts.min.css" integrity="sha512-qc0GepkUB5ugt8LevOF/K2h2lLGIloDBcWX8yawu/5V8FXSxZLn3NVMZskeEyOhlc6RxKiEj6QpSrlAoL1D3TA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.2/apexcharts.min.js" integrity="sha512-vIqZt7ReO939RQssENNbZ+Iu3j0CSsgk41nP3AYabLiIFajyebORlk7rKPjGddmO1FQkbuOb2EVK6rJkiHsmag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -44,6 +41,11 @@
 <!-- Plugin: JQuery daterangepicker  -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.css" />
+<!-- Plugin: JQuery daterangepicker  -->
+
+<!-- Plugin: JQuery select2 -->
+<script type="text/javascript" src="<?= base_url("assets") ?>/vendors/select2/select2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?= base_url("assets") ?>/vendors/select2/select2.min.css" />
 <!-- Plugin: JQuery daterangepicker  -->
 
 <!-- inject:css -->

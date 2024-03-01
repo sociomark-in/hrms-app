@@ -69,22 +69,22 @@
 					</ul>
 				</div>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item <?= (str_contains(explode(base_url(), current_url())[1], "employee-management")) ? "active" : "" ?>">
 				<a class="nav-link" data-bs-toggle="collapse" href="#employeesAll" role="button" aria-expanded="false" aria-controls="employeesAll">
 					<i class="link-icon" data-feather="users"></i>
-					<span class="link-title">Employees</span>
+					<span class="link-title">Human Resource</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
 				<div class="collapse" id="employeesAll">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="<?= base_url("employees") ?>" class="nav-link">Employees</a>
+							<a href="<?= base_url("employee-management/employees") ?>" class="nav-link <?=(str_contains(explode(base_url(), current_url())[1], "employee-management/employees")) ? "active" : "" ?>">Employees</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>" class="nav-link">Departments</a>
+							<a href="<?= base_url("employee-management/departments") ?>" class="nav-link">Departments</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url("") ?>" class="nav-link">Designations</a>
+							<a href="<?= base_url("employee-management/designations") ?>" class="nav-link">Designations</a>
 						</li>
 					</ul>
 				</div>

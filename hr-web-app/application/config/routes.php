@@ -75,6 +75,9 @@ $route['settings/app-settings/(:any)'] = "CompanySettingsController/appSettings/
 ==========================
 Requests
 ==========================
+requests
+
+
 work-off/history
 work-off/new 
 
@@ -87,6 +90,7 @@ salary-slips
 salary-slips/apply
 
 */
+$route["requests"] = "RequestsController/home";
 $route["work-off/history"] = "RequestsController/work_off/$1";
 $route["work-off/new"] = "RequestsController/work_off/$1";
 $route["reimbursements"] = "RequestsController/reimbursements";
@@ -111,10 +115,13 @@ Employees
 employees
 employee-database
 */
-$route["employees"]="EmployeeMgmtController/home";
-$route["employees/add"]="EmployeeMgmtController/new_employee";
+$route["employee-management/employees"]="EmployeeMgmtController/home";
+$route["employee-management/employees/new"]="EmployeeMgmtController/new_employee";
+$route["employee-management/employees/add/(:any)"]="EmployeeMgmtController/add_action_status/$1";
+
+$route['api/employee/new'] = "EmployeeMgmtController/add_employee";
+
 $route["attendance"]="DashboardController/attendance";
-$route["employee-database"]="";
 
 /*
 ==========================

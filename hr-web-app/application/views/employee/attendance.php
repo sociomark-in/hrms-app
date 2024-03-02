@@ -19,8 +19,7 @@
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#newLeaveModal">Leave</a></li>
 							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#newWFHModal">Work From Home</a></li>
-							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#newOnDutyModal">On Duty</a></li>
-							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#newCompOffModal">Comp Off</a></li>
+							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#newOnDutyModal">Away</a></li>
 						</ul>
 					</div>
 				</div>
@@ -147,7 +146,7 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex justify-content-between align-items-baseline">
-								<h6 class="card-title mb-0">On Duty</h6>
+								<h6 class="card-title mb-0">Away</h6>
 							</div>
 							<div class="row">
 								<div class="col-12">
@@ -491,7 +490,7 @@
 								<td>03</td>
 							</tr>
 							<tr>
-								<td>On Duty</td>
+								<td>Away</td>
 								<td>20</td>
 							</tr>
 						</table>
@@ -513,7 +512,7 @@
 					<div class="modal-body">
 						<div class="mb-3">
 							<label for="" class="form-label">From Date - To Date</label>
-							<input type="text" class="form-control" name="wfh_date">
+							<input type="text" class="form-control" name="wfh_dates">
 						</div>
 						<div class="mb-3">
 							<label for="" class="form-label">Reason to Apply</label>
@@ -547,7 +546,7 @@
 								<td>03</td>
 							</tr>
 							<tr>
-								<td>On Duty</td>
+								<td>Away</td>
 								<td>20</td>
 							</tr>
 						</table>
@@ -557,21 +556,33 @@
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="newCompOffModal" tabindex="-1" aria-labelledby="newCompOffModalLabel" aria-hidden="true">
+<div class="modal fade" id="newOnDutyModal" tabindex="-1" aria-labelledby="newOnDutyModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="row">
 			<div class="col-lg-7 col-md-auto col-12 grid-margin">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="newCompOffModalLabel">New Comp. Off</h1>
+						<h1 class="modal-title fs-5" id="newWFHModalLabel">New Away</h1>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						...
+						<div class="mb-3">
+							<label for="" class="form-label">From Date - To Date</label>
+							<input type="text" class="form-control" name="away_dates">
+						</div>
+						<div class="mb-3">
+							<label for="" class="form-label">Purpose:</label>
+							<input type="text" class="form-control" name="away_purpose">
+						</div>
+						<div class="mb-3">
+							<label for="" class="form-label">Message:</label>
+							<textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+						</div>
+						<div class="mb-3"></div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Apply for Comp. Off</button>
+						<button type="button" class="btn btn-primary">Apply for WFH</button>
 					</div>
 				</div>
 			</div>
@@ -595,7 +606,7 @@
 								<td>03</td>
 							</tr>
 							<tr>
-								<td>On Duty</td>
+								<td>Away</td>
 								<td>20</td>
 							</tr>
 						</table>
@@ -621,16 +632,23 @@
 			}
 		}
 	});
-	$('input[name="compoff_dates"]').daterangepicker({
+	$('input[name="wfh_dates"]').daterangepicker({
 		"maxDate": moment(),
 		"maxSpan": {
 			"days": 2
 		},
 	});
-	$('input[name="wfh_date"]').daterangepicker({
+	$('input[name="away_dates"]').daterangepicker({
 		"minDate": moment(),
 		"maxSpan": {
-			"days": 1
+			"days": 20
 		},
+		isInvalidDate: function(date) {
+			if (date.day() == 0 || date.day() == 6) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	});
 </script>

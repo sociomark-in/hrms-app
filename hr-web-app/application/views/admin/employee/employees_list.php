@@ -14,7 +14,13 @@
 				</div>
 				<div class="col-auto">
 					<div class="dropdown">
-						<a href="<?= base_url("employee-management/employees/new") ?>" class="btn btn-primary" data-bs-trigger="hover" data-bs-toggle="popover" title="Add A New Employee" data-bs-content="And here's some tips to Add A New Employee">Add New Employee</a>
+						<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-trigger="hover" data-bs-toggle="popover" title="Add A New Employee" data-bs-content="And here's some tips to Add A New Employee">
+							Add New Employee
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="<?= base_url("employee-management/employees/new") ?>">Add Single Employee</a></li>
+							<li><a class="dropdown-item" href="<?= base_url("employee-management/employees/new-bulk") ?>">Upload Bulk Employee</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -49,7 +55,7 @@
 										zoom: {
 											enabled: true,
 											type: 'x',
-											autoScaleYaxis: false,  
+											autoScaleYaxis: false,
 										}
 									},
 									plotOptions: {

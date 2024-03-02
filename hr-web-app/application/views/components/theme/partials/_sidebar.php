@@ -52,6 +52,67 @@
 					<span class="link-title">Dashboard</span>
 				</a>
 			</li>
+			<li class="nav-item <?= (str_contains(explode(base_url(), current_url())[1], "employee-management")) ? "active" : "" ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#employeesAll" role="button" aria-expanded="false" aria-controls="employeesAll">
+					<i class="link-icon" data-feather="users"></i>
+					<span class="link-title">Human Resource</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="employeesAll">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("employee-management/employees") ?>" class="nav-link <?=(str_contains(explode(base_url(), current_url())[1], "employee-management/employees")) ? "active" : "" ?>">Employees</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("employee-management/departments") ?>" class="nav-link <?=(str_contains(explode(base_url(), current_url())[1], "employee-management/departments")) ? "active" : "" ?>">Departments</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("employee-management/designations") ?>" class="nav-link <?=(str_contains(explode(base_url(), current_url())[1], "employee-management/designations")) ? "active" : "" ?>">Designations</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item <?= (str_contains(explode(base_url(), current_url())[1], "requests")) ? "active" : "" ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#requestAll" role="button" aria-expanded="false" aria-controls="requestAll">
+					<i class="link-icon" data-feather="navigation"></i>
+					<span class="link-title">Requests</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="requestAll">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("requests") ?>" class="nav-link <?= (explode(base_url(), current_url())[1] == "requests") ? "active" : "" ?>">All Requests</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("requests/new") ?>pages/ui-components/accordion" class="nav-link">New Request</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("requests/pending") ?>pages/ui-components/alerts" class="nav-link">Pending Approvals</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("requests/trash") ?>pages/ui-components/alerts" class="nav-link">Trash</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item <?= (str_contains(explode(base_url(), current_url())[1], "payroll")) ? "active" : "" ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#adminPayroll" role="button" aria-expanded="false" aria-controls="adminPayroll">
+					<i class="link-icon" data-feather="credit-card"></i>
+					<span class="link-title">Payroll</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="adminPayroll">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("payroll/new") ?>" class="nav-link">Run New Payroll</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url("payroll/payroll-history") ?>pages/ui-components/alerts" class="nav-link">Payroll History</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
 			<li class="nav-item">
 				<a class="nav-link" data-bs-toggle="collapse" href="#generalAdminOption" role="button" aria-expanded="false" aria-controls="generalAdminOption">
 					<i class="link-icon" data-feather="box"></i>
@@ -65,66 +126,6 @@
 						</li>
 						<li class="nav-item">
 							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Alerts</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="nav-item <?= (str_contains(explode(base_url(), current_url())[1], "employee-management")) ? "active" : "" ?>">
-				<a class="nav-link" data-bs-toggle="collapse" href="#employeesAll" role="button" aria-expanded="false" aria-controls="employeesAll">
-					<i class="link-icon" data-feather="users"></i>
-					<span class="link-title">Human Resource</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
-				</a>
-				<div class="collapse" id="employeesAll">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("employee-management/employees") ?>" class="nav-link <?=(str_contains(explode(base_url(), current_url())[1], "employee-management/employees")) ? "active" : "" ?>">Employees</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("employee-management/departments") ?>" class="nav-link">Departments</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("employee-management/designations") ?>" class="nav-link">Designations</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#requestAll" role="button" aria-expanded="false" aria-controls="requestAll">
-					<i class="link-icon" data-feather="navigation"></i>
-					<span class="link-title">Requests</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
-				</a>
-				<div class="collapse" id="requestAll">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">All Requests</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("reimbursements") ?>pages/ui-components/accordion" class="nav-link">Reimbursements</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("salary-slips") ?>pages/ui-components/alerts" class="nav-link">Salary Slips</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("salary-slips") ?>pages/ui-components/alerts" class="nav-link">Comp-offs</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="collapse" href="#adminPayroll" role="button" aria-expanded="false" aria-controls="adminPayroll">
-					<i class="link-icon" data-feather="credit-card"></i>
-					<span class="link-title">Payroll</span>
-					<i class="link-arrow" data-feather="chevron-down"></i>
-				</a>
-				<div class="collapse" id="adminPayroll">
-					<ul class="nav sub-menu">
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/accordion" class="nav-link">Salary Slips</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url("") ?>pages/ui-components/alerts" class="nav-link">Work-Off History</a>
 						</li>
 					</ul>
 				</div>

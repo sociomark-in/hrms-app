@@ -91,8 +91,15 @@ salary-slips/apply
 
 */
 $route["requests"] = "RequestsController/home";
+$route["requests/new"] = "RequestsController/new";
+$route["requests/archived"] = "RequestsController/archived";
+$route["requests/important"] = "RequestsController/important";
+$route["requests/trash"] = "RequestsController/trash";
+$route["request/(:any)"] = "RequestsController/detail";
+
 $route["work-off/history"] = "RequestsController/work_off/$1";
 $route["work-off/new"] = "RequestsController/work_off/$1";
+
 $route["reimbursements"] = "RequestsController/reimbursements";
 $route["reimbursements/apply"] = "";
 $route["salary-slips"] = "";
@@ -114,12 +121,21 @@ Employees
 ==========================
 employees
 employee-database
+
+
+employee-management/designations
 */
 $route["employee-management/employees"]="EmployeeMgmtController/home";
 $route["employee-management/employees/new"]="EmployeeMgmtController/new_employee";
+$route["employee-management/employees/new-bulk"]="EmployeeMgmtController/new_bulk_employee";
 $route["employee-management/employees/add/(:any)"]="EmployeeMgmtController/add_action_status/$1";
 
 $route['api/employee/new'] = "EmployeeMgmtController/add_employee";
+$route['api/upload/single_document'] = "EmployeeMgmtController/single_document_upload";
+$route['api/upload/employee/bulk'] = "EmployeeMgmtController/bulk_upload";
+
+$route["employee-management/designations"] = "EmployeeMgmtController/all_designations";
+$route["employee-management/departments"] = "EmployeeMgmtController/all_departments";
 
 $route["attendance"]="DashboardController/attendance";
 

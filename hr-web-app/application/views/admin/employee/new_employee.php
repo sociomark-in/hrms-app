@@ -137,8 +137,9 @@
 															<input type="email" class="form-control" disabled>
 														</div>
 													</div>
+													<div class="col-xl-10 col-lg-9 col-md-6 col-12"></div>
 													<?php if (in_array('email', $control_options['fields'])) : ?>
-														<div class="col-12">
+														<div class="col-lg-8 col-md-6 col-12">
 															<div class="mb-3">
 																<label for="" class="form-label">Email</label>
 																<input type="email" class="form-control" required>
@@ -185,7 +186,22 @@
 															</div>
 														</div>
 													<?php endif ?>
-
+													<div class="col-lg-4 col-md-6 col-12">
+														<div class="mb-3">
+															<label for="" class="form-label">Reporting to</label>
+															<select name="" id="select2RM" required class="form-select">
+																<option selected>Select Reporting Manager</option>
+																<?php for ($i = 0; $i < 10; $i++) : ?>
+																	<option value="">
+																		Manager <?= $i ?>
+																	</option>
+																<?php endfor ?>
+															</select>
+															<script>
+																$("#select2RM").select2();
+															</script>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -209,11 +225,11 @@
 														</div>
 														<div class="mb-3">
 															<label for="" class="form-label">Upload a Document</label>
-															<input type="file" name="" id="fileDropzone">
+															<input type="file" name="upload_document" id="fileDropzone">
 															<script>
 																$("input#fileDropzone").fileinput({
 																	language: 'en',
-																	uploadUrl: '<?= base_url('upload') ?>',
+																	uploadUrl: '<?= base_url('api/upload/single_document') ?>',
 																	allowedFileExtensions: ['pdf', 'jpg', 'png'],
 																	uploadExtraData: function(mom) {
 																		var arr = {
@@ -308,19 +324,19 @@
 </div>
 
 <div class="modal fade" id="employeeAddSuccessModal" tabindex="-1" aria-labelledby="employeeAddSuccessModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="employeeAddSuccessModalLabel">Success</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-		Employee Added Successfully!!
-      </div>
-      <div class="modal-footer">
-        <a href="" class="btn btn-primary">Go to Employee Profile</a>
-        <a href="<?= base_url("employee-management/employees") ?>" class="btn btn-secondary">Go to All Employees</a>
-      </div>
-    </div>
-  </div>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="employeeAddSuccessModalLabel">Success</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				Employee Added Successfully!!
+			</div>
+			<div class="modal-footer">
+				<a href="<?= base_url("profile?employee_id=EMP_19BaV_33") ?>" class="btn btn-primary">Go to Employee Profile</a>
+				<a href="<?= base_url("employee-management/employees") ?>" class="btn btn-secondary">Go to All Employees</a>
+			</div>
+		</div>
+	</div>
 </div>

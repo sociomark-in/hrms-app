@@ -63,6 +63,7 @@ $route['login'] = 'AuthController/login';
 $route['signup'] = 'OnboardingController/signup';
 $route['api/onboarding/signup'] = "AuthController/register";
 $route['api/onboarding/resend-key'] = "AuthController/resend_key";
+$route['api/onboarding/proceed'] = "OnboardingController/process_onboarding";
 
 $route['profile'] = "UserAccountController/profile";
 

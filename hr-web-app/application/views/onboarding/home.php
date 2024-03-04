@@ -80,7 +80,7 @@
 											<div class=" col-xl-3 col-lg-6 col-12 grid-margin">
 												<div class="">
 													<label for="formInput" class="form-label">PIN Code</label>
-													<input type="text" name="company_details[pincode]" id="formInput7" maxlength="8" minlength="8" class="form-control" required>
+													<input type="text" name="company_details[pincode]" id="formInput7" maxlength="7" minlength="7" class="form-control" required>
 												</div>
 											</div>
 											<div class=" col-xl-3 col-lg-6 col-12 grid-margin">
@@ -165,23 +165,23 @@
 															</tr>
 															<?php foreach ($org_holidays as $key => $holiday) : ?>
 																<tr>
-																	<td><input type="text" class="form-control" value="<?= $holiday['title'] ?>"></td>
+																	<td><input type="text" class="form-control" name="holiday[<?=$key?>][title]" value="<?= $holiday['title'] ?>"></td>
 																	<td>
-																		<input type="date" class="form-control" value="<?= date_format(date_create_from_format("d-m", $holiday["from_date"]), "Y-m-d") ?>">
+																		<input type="date" class="form-control" name="holiday[<?=$key?>][from_date]" value="<?= date_format(date_create_from_format("d-m", $holiday["from_date"]), "Y-m-d") ?>">
 																	</td>
 																	<td>
-																		<input type="date" class="form-control" value="<?= date_format(date_create_from_format("d-m", $holiday["to_date"]), "Y-m-d") ?>">
+																		<input type="date" class="form-control" name="holiday[<?=$key?>][to_date]" value="<?= date_format(date_create_from_format("d-m", $holiday["to_date"]), "Y-m-d") ?>">
 																	</td>
 																</tr>
 															<?php endforeach ?>
-															<?php for ($i = 0; $i < 5; $i++) : ?>
+															<?php for ($i = count($org_holidays); $i < count($org_holidays) + 5; $i++) : ?>
 																<tr>
-																	<td><input type="text" class="form-control"></td>
+																	<td><input type="text" name="holiday[<?=$i?>][title]"class="form-control"></td>
 																	<td>
-																		<input type="date" class="form-control">
+																		<input type="date" name="holiday[<?=$i?>][from_date]" class="form-control">
 																	</td>
 																	<td>
-																		<input type="date" class="form-control">
+																		<input type="date" name="holiday[<?=$i?>][to_date]" class="form-control">
 																	</td>
 																</tr>
 															<?php endfor ?>
@@ -362,21 +362,21 @@
 									activeClass: "active",
 									// doneClass: "done",
 									// errorClass: "error",
-									// onChange: function(event, currentIndex, newIndex) {
-									// 	form.validate({
-									// 		ignore: ":disabled,:hidden"
-									// 	});
-									// 	return form.valid();
-									// },
+									onChange: function(event, currentIndex, newIndex) {
+										form.validate({
+											ignore: ":disabled,:hidden"
+										});
+										return form.valid();
+									},
 									onFinish: function() {
 										var formData = new FormData(document.getElementById("onboardingStepOneForm"))
 										console.log(formData);
 										var object = {};
 										formData.forEach((value, key) => object[key] = value);
-										// var json = JSON.stringify(object);
+										object['auth_key'] = "<?= $this->input->get('key') ?>"
 										$.ajax({
 											data: object,
-											url: "<?= base_url('api/action/app-settings/general') ?>",
+											url: "<?= base_url('api/onboarding/proceed') ?>",
 											method: "POST",
 											success: () => {
 												console.log("AJAX Success");

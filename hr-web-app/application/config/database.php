@@ -71,9 +71,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $active_group = 'dev';
+$active_group = 'testing';
 $query_builder = TRUE;
 
-$db['default'] = array(
+$db['testing'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'hrmsapogee_admin',

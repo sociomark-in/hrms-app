@@ -53,13 +53,125 @@ $route['default_controller'] = 'HomeController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['test/(:any)'] = "TestController/experiment/$1";
+
+
+$route['onboarding/home'] = "OnboardingController/home";
+
 $route['dashboard'] = 'DashboardController/index';
-$route['login'] = 'DashboardController/login';
+$route['login'] = 'AuthController/login';
+$route['signup'] = 'OnboardingController/signup';
+$route['api/onboarding/signup'] = "AuthController/register";
+$route['api/onboarding/resend-key'] = "AuthController/resend_key";
+$route['api/onboarding/proceed'] = "OnboardingController/process_onboarding";
+
+$route['profile'] = "UserAccountController/profile";
+
+$route['api/auth/login'] = "AuthController/authenticate";
+$route['api/action/attendance/(:any)'] = "UserActionController/attendance/$1";
+$route['api/action/app-settings/(:any)'] = "CompanySettingsController/appSettings/$1";
+
+$route['settings/app-settings/(:any)'] = "CompanySettingsController/appSettings/$1";
+
+
+/*
+==========================
+Requests
+==========================
+requests
+
+
+work-off/history
+work-off/new 
+
+
+reimbursements
+reimbursements/apply
+
+
+salary-slips
+salary-slips/apply
+
+*/
+$route["requests"] = "RequestsController/home";
+$route["requests/new"] = "RequestsController/new";
+$route["requests/archived"] = "RequestsController/archived";
+$route["requests/important"] = "RequestsController/important";
+$route["requests/trash"] = "RequestsController/trash";
+$route["request/(:any)"] = "RequestsController/detail";
+
+$route["work-off/history"] = "RequestsController/work_off/$1";
+$route["work-off/new"] = "RequestsController/work_off/$1";
+
+$route["reimbursements"] = "RequestsController/reimbursements";
+$route["reimbursements/apply"] = "";
+$route["salary-slips"] = "";
+$route["salary-slips/apply"] = "";
+
+
+
+/*
+==========================
+Request Actions (Admin)
+==========================
+action/request/{:any}/{:action - approve/reject/edit}
+action/send/{:any - }
+*/
 
 /* 
-account/settings/password/forgot-password
-account/settings/password/password-reset
-account/settings/password/new-password
+==========================
+Employees
+==========================
+employees
+employee-database
+
+
+employee-management/designations
 */
-$route['account/settings/password/(:any)'] = 'DashboardController/manage_password/$1';
+$route["employee-management/employees"]="EmployeeMgmtController/home";
+$route["employee-management/employees/new"]="EmployeeMgmtController/new_employee";
+$route["employee-management/employees/new-bulk"]="EmployeeMgmtController/new_bulk_employee";
+$route["employee-management/employees/add/(:any)"]="EmployeeMgmtController/add_action_status/$1";
+
+$route['api/employee/new'] = "EmployeeMgmtController/add_employee";
+$route['api/upload/single_document'] = "EmployeeMgmtController/single_document_upload";
+$route['api/upload/employee/bulk'] = "EmployeeMgmtController/bulk_upload";
+
+$route["employee-management/designations"] = "EmployeeMgmtController/all_designations";
+$route["employee-management/departments"] = "EmployeeMgmtController/all_departments";
+
+$route["attendance"]="DashboardController/attendance";
+
+/*
+==========================
+Applications
+==========================
+
+Applications > Calendar
+--------------------------
+calendar
+
+
+Applications > Mail Box
+--------------------------
+mail/inbox
+mail/compose
+mail/{chat_id}
+*/
+
+$route['calendar'] = "AppsController/calendar";
+$route['mail/(:any)'] = "AppsController/calendar";
+
+/* 
+==========================
+Settings
+==========================
+
+Settings > Account > Password
+--------------------------
+settings/account/password/forgot-password
+settings/account/password/password-reset
+settings/account/password/new-password
+*/
+$route['settings/account/password/(:any)'] = 'DashboardController/manage_password/$1';
 $route['apps/calendar'] = 'AppsController/calendar';

@@ -5,9 +5,9 @@ class UserActionController extends CI_Controller
 	public function attendance($action)
 	{
 		$this->load->model("attendance/AttendanceModel");
+		$ajax_data = $this->input->post();
 		switch ($action) {
 			case 'punch-in':
-				$ajax_data = $this->input->post();
 				$data = [
 					"app_id" => get_cookie("app_id"),
 					"emp_id" => "1",
@@ -17,8 +17,15 @@ class UserActionController extends CI_Controller
 				$this->AttendanceModel->add($data);
 				break;
 			case 'punch-out':
-				$ajax_data = $this->input->post();
-				print_r($this->input->post());
+				$data = [
+					"timepunchOut" => $ajax_data["punch_out_time"]
+				];
+				$where = [
+					"app_id" => get_cookie("app_id"),
+					"emp_id" => "1",
+					"attendance_date" => date("y-m-d"),
+				];
+				$this->AttendanceModel->update($data, $where);
 				break;
 
 			default:

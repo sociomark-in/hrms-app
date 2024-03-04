@@ -39,7 +39,7 @@
 												<div class="row">
 													<div class="bg-light p-3 col-12 grid-margin">
 														<div class="mb-2">
-															<h5>company Information:</h5>
+															<h5>Company Information:</h5>
 														</div>
 														<div class="">
 															<ul>
@@ -53,33 +53,9 @@
 											</div>
 										</div>
 										<div class="row m-0">
-											<div class="col-md-6 col-12 grid-margin">
-												<div class="">
-													<label for="formInput" class="form-label">Your Name</label>
-													<input type="text" name="company_details[name]" id="formInput1" class="form-control" required>
-												</div>
-											</div>
-											<div class="col-md-6  grid-margin">
-												<div class="">
-													<label for="formInput" class="form-label">Email Address</label>
-													<input type="email" data-inputmask="'alias': 'email'" name="company_details[email]" id="formInput2" class="form-control" required>
-												</div>
-											</div>
-											<div class="col-xl-4 col-md-6 col-12 grid-margin">
-												<div class="">
-													<label for="formInput" class="form-label">Company Name</label>
-													<input type="text" name="company_details[name]" id="formInput1" class="form-control" required>
-												</div>
-											</div>
-											<div class="col-xl-4 col-md-6 col-12 grid-margin">
-												<div class="">
-													<label for="formInput" class="form-label">Contact Number</label>
-													<input type="text" minlength="10" maxlength="10" name="company_details[contact]" id="formInput3" class="form-control" required>
-												</div>
-											</div>
 											<div class="col-xl-4 col-lg-6 col-12 grid-margin">
 												<div class="">
-													<label for="formInput" class="form-label">Company Type</label>
+													<label for="formInput" class="form-label">Organization Type</label>
 													<select name="company_details[company_type]" id="formInput4" class="form-select" required>
 														<option value="LLP">Limited Liability Partnership (LLP)</option>
 														<option value="LLP">Corporate Ownership</option>
@@ -88,13 +64,13 @@
 											</div>
 											<div class="col-xl-3 col-lg-6 col-12 grid-margin">
 												<div class="">
-													<label for="formInput" class="form-label">Company GSTIN</label>
+													<label for="formInput" class="form-label">Organization GSTIN</label>
 													<input type="text" name="company_details[gstin]" id="formInput5" class="form-control" required>
 												</div>
 											</div>
 											<div class=" col-xl-3 col-lg-6 col-12 grid-margin">
 												<div class="">
-													<label for="formInput" class="form-label">Company PAN</label>
+													<label for="formInput" class="form-label">Organization PAN</label>
 													<input type="text" name="company_details[pan_no]" id="formInput6" class="form-control" required>
 												</div>
 											</div>
@@ -106,11 +82,14 @@
 											</div>
 											<div class=" col-xl-3 col-lg-6 col-12 grid-margin">
 												<div class="">
-													<label for="formInput" class="form-label">State</label>
-													<select name="company_details[state]" id="formInput7" class="form-select" required>
-														<option></option>
+													<label for="select2State" class="form-label">State</label>
+													<select name="company_details[state]" id="select2State" class="form-select" required>
+														<option>Select A State</option>
 														<option value="Maharashtra">Maharashtra</option>
 													</select>
+													<script>
+														$("#select2State").select2();
+													</script>
 												</div>
 											</div>
 											<div class="col-12 grid-margin">

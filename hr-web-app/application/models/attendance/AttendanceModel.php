@@ -30,4 +30,16 @@ class AttendanceModel extends CI_Model
 			return false;
 		}
 	}
+	public function update($data, array $where = NULL)
+	{
+		$this->db->set($data);
+		if(NULL !== $where){
+			$this->db->where($where);
+		}
+		if ($this->db->update('app_company_attendance')) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

@@ -60,7 +60,7 @@ $route['onboarding/home'] = "OnboardingController/home";
 
 $route['dashboard'] = 'DashboardController/index';
 $route['login'] = 'AuthController/login';
-$route['register'] = 'AuthController/register';
+$route['signup'] = 'OnboardingController/signup';
 
 $route['profile'] = "UserAccountController/profile";
 

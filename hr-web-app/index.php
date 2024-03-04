@@ -54,13 +54,8 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 	define('ENVIRONMENT', 'development');
-<<<<<<< HEAD
-
-/*
-=======
 	date_default_timezone_set('Asia/Calcutta');
 /*;
->>>>>>> a3b7e4e233c37a5d16e3b760e3cd04ee7df63df1
  *---------------------------------------------------------------
  * ERROR REPORTING
  *---------------------------------------------------------------

@@ -1,4 +1,6 @@
 <main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<div class="page-wrapper">
 		<div class="full-page">
 			<div class="page-content h-100 d-flex align-items-center justify-content-center">
@@ -6,12 +8,25 @@
 					<div class="col-xxl-5 col-xl-7 col-lg-9 col-12">
 						<div class="row justify-content-center">
 							<div class="col-xl-6 col-lg-8 col-md-10 col-12">
-								<?= form_open() ?>
+								<?= form_open("api/onboarding/signup") ?>
 								<div class="card">
 									<div class="card-body">
 										<div class="card-title text-center">
 											<h4>Start Your Free Trial</h4>
 										</div>
+										<?php
+										if ($this->session->has_userdata('signup_status')) :
+											$status = $this->session->userdata('signup_status');
+											if ($status['code'] == "200") : ?>
+												<div class="alert alert-success">
+													Check Your Email Address for Next Steps <span>Or <a href="<?= base_url('onboarding/home?key=') . $status['data']['email_validate_key'] ?>">Click Here</a></span>
+												</div>
+											<?php else : ?>
+												<div class="alert alert-danger">
+													Check Your Email Address for Next Steps <span>Or <a href="">Click Here</a></span>
+												</div>
+											<?php endif ?>
+										<?php endif ?>
 										<div class="mb-3">
 											<label for="" class="form-label">Full Name</label>
 											<input type="text" class="form-control" name="full_name">
@@ -54,6 +69,13 @@
 									</div>
 								</div>
 								<?= form_close() ?>
+								<script>
+									$(document).ready(() => {
+										$('[name="contact_number"]').mask('+00 000 000 0000', {
+											placeholder: "+99 999 999 9999"
+										})
+									})
+								</script>
 							</div>
 						</div>
 

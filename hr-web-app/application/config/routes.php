@@ -61,6 +61,8 @@ $route['onboarding/home'] = "OnboardingController/home";
 $route['dashboard'] = 'DashboardController/index';
 $route['login'] = 'AuthController/login';
 $route['signup'] = 'OnboardingController/signup';
+$route['api/onboarding/signup'] = "AuthController/register";
+$route['api/onboarding/resend-key'] = "AuthController/resend_key";
 
 $route['profile'] = "UserAccountController/profile";
 

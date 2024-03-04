@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.0/dist/jquery-steps.min.css">
 <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/jquery-steps/css/jquery.steps.min.css">
 
+<!-- <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js”></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <div class="page-content">
 	<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
 		<div>
@@ -65,7 +68,7 @@
 											<div class="col-xl-3 col-lg-6 col-12 grid-margin">
 												<div class="">
 													<label for="formInput" class="form-label">Organization GSTIN</label>
-													<input type="text" name="company_details[gstin]" id="formInput5" class="form-control" required>
+													<input type="text" name="company_details[gstin]" id="formInput5" data-mask="00/00/0000" class="form-control" required>
 												</div>
 											</div>
 											<div class=" col-xl-3 col-lg-6 col-12 grid-margin">
@@ -345,8 +348,8 @@
 							</div>
 
 							<script src="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.0/dist/jquery-steps.min.js"></script>
-							<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/inputmask.min.js" referrerpolicy="no-referrer"></script>
-							<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" referrerpolicy="no-referrer"></script>
+							<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/inputmask.min.js" referrerpolicy="no-referrer"></script>
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" referrerpolicy="no-referrer"></script> -->
 							<script>
 								var form = $("#onboardingStepOneForm");
 								$('#demo').steps({
@@ -388,7 +391,22 @@
 										alert('destroyed');
 									}
 								});
-								$(":input").inputmask();
+								$(document).ready(function() {
+									$('[name="company_details[pincode]"]').mask('000 000', {
+										'placeholder' : "000 000"
+									});
+									$('[name="company_details[pan_no]"]').mask('AAAAA0000A', {
+										'placeholder': "AAAAA0000A",
+										'translation': {
+											A: {
+												pattern: /[A-Z]/
+											},
+											0: {
+												pattern: /[0-9]/
+											}
+										}
+									});
+								})
 							</script>
 						</div>
 					</div>

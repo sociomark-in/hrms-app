@@ -39,6 +39,4 @@ class MY_Loader extends CI_Loader
 		$this->view("error_pages/" . $view, $vars);
 		$this->view('layout/_2_mini', $vars);
 	}
-
-	
 }

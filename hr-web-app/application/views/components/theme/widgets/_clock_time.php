@@ -6,19 +6,22 @@
 		$isPunchedIn = false;
 		$isPunchedOut = false;
 		$punch_in_time = $attendance["time_in"];
-		if (isset($punch_in_time) && $punch_in_time != "") {
+		$punch_out_time = $attendance["time_out"];
+		if (!isset($punch_in_time) && $punch_in_time == "") {
+			$isPunchedIn = false;
+		} else {
 			$isPunchedIn = true;
+			if (!isset($punch_out_time) && $punch_out_time == "") {
+				$isPunchedOut = false;
+			} else {
+				$isPunchedOut = true;
+			}
+		}
+		if ($isPunchedIn) {
 			$clock_time = new DateTime(date_format(date_create($punch_in_time), "y-m-d H:i:s"));
 			$now = new DateTime(date("Y-m-d H:i:s"));
 			$diff = $clock_time->diff($now);
 			$elapsed_time = (($diff->h + ($diff->i / 60)) / 12) * 100;
-		}
-		 else if (isset($punch_out_time) && $punch_out_time != "") {
-			$isPunchedOut = true;
-			$elapsed_time = 0;
-		} else {
-			$isPunchedIn = false;
-			$elapsed_time = 0;
 		}
 		?>
 		<div class="row align-items-center">
@@ -33,12 +36,16 @@
 				<div class="row gap-3">
 					<div class="col-md-12 col-6">
 						<?php
-						if ($isPunchedIn) : ?>
+						
+						if ($isPunchedIn && $isPunchedOut) : ?>
+							<div class="mb-2">
+								Punched out at <br> <strong><?= $punch_out_time ?></strong>
+							</div>
+						<?php elseif ($isPunchedIn) : ?>
 							<div class="mb-2">
 								Punched in at <br> <strong><?= $punch_in_time ?></strong>
 							</div>
 							<button id="punch_in_button" class="btn btn-danger w-100">Punch Out</button>
-						<?php elseif ($isPunchedOut) : ?>
 						<?php else : ?>
 							<button id="punch_in_button" class="btn btn-primary w-100">Punch In</button>
 						<?php endif ?>
